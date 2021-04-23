@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Td Events &mdash; Tdproto docs  documentation</title>
+  <title>Client events &mdash; Tdproto docs  documentation</title>
   
 
   
@@ -84,7 +84,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Td Events</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Client events</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#client-activity">client.activity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-buzzcancel">client.call.buzzcancel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-leave">client.call.leave</a></li>
@@ -99,6 +99,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#client-message-deleted">client.message.deleted</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-message-updated">client.message.updated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-ping">client.ping</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#server-events">Server events</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-answer">server.call.answer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-buzz">server.call.buzz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-buzzcancel">server.call.buzzcancel</a></li>
@@ -189,7 +192,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Td Events</li>
+      <li>Client events</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,8 +211,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="td-events">
-<h1>Td Events<a class="headerlink" href="#td-events" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="client-events">
+<h1>Client events<a class="headerlink" href="#client-events" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="client-activity">
 <h2>client.activity<a class="headerlink" href="#client-activity" title="Permalink to this headline">¶</a></h2>
 <p>Change AFK (away from keyboard) status</p>
@@ -266,9 +269,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="client-call-offer">
 <h2>client.call.offer<a class="headerlink" href="#client-call-offer" title="Permalink to this headline">¶</a></h2>
@@ -463,6 +464,9 @@
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="server-events">
+<h1>Server events<a class="headerlink" href="#server-events" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="server-call-answer">
 <h2>server.call.answer<a class="headerlink" href="#server-call-answer" title="Permalink to this headline">¶</a></h2>
 <p>Call parameters</p>
@@ -569,9 +573,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fingerprint</span></code> - DOCUMENTATION MISSING</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-leave">
 <h2>server.call.leave<a class="headerlink" href="#server-call-leave" title="Permalink to this headline">¶</a></h2>
@@ -580,9 +582,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call uid</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-muteall">
 <h2>server.call.muteall<a class="headerlink" href="#server-call-muteall" title="Permalink to this headline">¶</a></h2>
@@ -591,9 +591,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - Mute state</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-reject">
 <h2>server.call.reject<a class="headerlink" href="#server-call-reject" title="Permalink to this headline">¶</a></h2>
@@ -603,9 +601,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">reason</span></code> - Reason, if any</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-restart">
 <h2>server.call.restart<a class="headerlink" href="#server-call-restart" title="Permalink to this headline">¶</a></h2>
@@ -615,9 +611,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> - Team id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Call id</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-sound">
 <h2>server.call.sound<a class="headerlink" href="#server-call-sound" title="Permalink to this headline">¶</a></h2>
@@ -626,9 +620,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - Mute state</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-call-state">
 <h2>server.call.state<a class="headerlink" href="#server-call-state" title="Permalink to this headline">¶</a></h2>
@@ -757,9 +749,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> - Draft version. TODO: use gentime instead</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - Chat or contact id</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-chat-lastread">
 <h2>server.chat.lastread<a class="headerlink" href="#server-chat-lastread" title="Permalink to this headline">¶</a></h2>
@@ -909,9 +899,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - Debug message</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-login">
 <h2>server.login<a class="headerlink" href="#server-login" title="Permalink to this headline">¶</a></h2>
@@ -944,9 +932,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> - Team uid</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> - Push title</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-message-received">
 <h2>server.message.received<a class="headerlink" href="#server-message-received" title="Permalink to this headline">¶</a></h2>
@@ -1088,9 +1074,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> - Current processing item</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> - Total processing items</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-remind-deleted">
 <h2>server.remind.deleted<a class="headerlink" href="#server-remind-deleted" title="Permalink to this headline">¶</a></h2>
@@ -1201,9 +1185,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - Tags info</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-tag-updated">
 <h2>server.tag.updated<a class="headerlink" href="#server-tag-updated" title="Permalink to this headline">¶</a></h2>
@@ -1211,9 +1193,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - Tags info</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-team-counters">
 <h2>server.team.counters<a class="headerlink" href="#server-team-counters" title="Permalink to this headline">¶</a></h2>
@@ -1513,9 +1493,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> - Uploads data</p></li>
 </ul>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>EVENT MISSING EXAMPLE
-</pre></div>
-</div>
+<p><strong>MISSING EXAMPLE</strong></p>
 </div>
 <div class="section" id="server-warning">
 <h2>server.warning<a class="headerlink" href="#server-warning" title="Permalink to this headline">¶</a></h2>
