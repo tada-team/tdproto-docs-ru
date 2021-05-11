@@ -1,0 +1,250 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Основы &mdash; документация Tdproto docs </title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Остальные пути" href="misc_paths.html" />
+    <link rel="prev" title="Документация Tdproto" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Tdproto docs
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Основы</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jid">JID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#is-archive-field">Поле <code class="docutils literal notranslate"><span class="pre">is_archive</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#can-fields">Поля <code class="docutils literal notranslate"><span class="pre">can_*</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features-json"><code class="docutils literal notranslate"><span class="pre">/features.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">События клиента</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html#server-events">События сервера</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tdproto docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Основы</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/basics.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basics">
+<h1>Основы<a class="headerlink" href="#basics" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="jid">
+<h2>JID<a class="headerlink" href="#jid" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Работа ведется в командах. Внутри команды есть контакты, задачи, групповые чаты. Контакт из одной команды не может просто так общаться с контактом из другой.</p>
+<p>Каждый пользователь в команде имеет идентификатор вида <code class="docutils literal notranslate"><span class="pre">d-&lt;UID&gt;</span></code> . По историческим причинам он называется <code class="docutils literal notranslate"><span class="pre">JID</span></code> .</p>
+<p>В скольких командах состоит пользователь, столько у него и <code class="docutils literal notranslate"><span class="pre">JID</span></code> . Если пользователь состоит в 3 командах, у него 3 <code class="docutils literal notranslate"><span class="pre">JID</span></code> . Если пользователь новый, то <code class="docutils literal notranslate"><span class="pre">JID</span></code> у него еще нет.</p>
+</div>
+<div class="section" id="is-archive-field">
+<h2>Поле <code class="docutils literal notranslate"><span class="pre">is_archive</span></code><a class="headerlink" href="#is-archive-field" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Из системы ничего не удаляется, просто выставляется флаг <code class="docutils literal notranslate"><span class="pre">is_archive</span></code> . Исключение: устройства.</p>
+</div>
+<div class="section" id="can-fields">
+<h2>Поля <code class="docutils literal notranslate"><span class="pre">can_*</span></code><a class="headerlink" href="#can-fields" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Если известно, кто запрашивает объект, у него появляются дополнительные поля <code class="docutils literal notranslate"><span class="pre">can_ЧТО-НИБУДЬ</span></code> . Они означают, «могу ли я, <em>запрашивающий</em>, делать с этим объектом ЧТО-НИБУДЬ».</p>
+<p>Примеры:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{&quot;can_send_message&quot;:</span> <span class="pre">false}</span></code> в своем профиле означает, что я НЕ могу послать себе сообщение.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{&quot;can_add_to_team&quot;:</span> <span class="pre">true}</span></code> в команде означает, что я МОГУ добавлять новых участников в команду (вероятно я администратор, а может владелец)</p></li>
+</ul>
+<p>В реальности этих полей в базе не существует — они вычисляются на лету.</p>
+<p>Для чего это надо: чтобы логика была по-максимуму в одном месте.</p>
+<p>Например, мы решаем, что теперь можно слать себе сообщения. Немного изменяем сервер, и если приложения проверяли не «это я себе пишу, или не себе пишу», а тупо смотрели на флаг <code class="docutils literal notranslate"><span class="pre">can_send_message</span></code> , то больше никаких изменений вносить не надо: оба мобильных клиента и веб-клиент сразу меняют свою логику.</p>
+<p>Второй пример: мы можем когда-нибудь завести новую сущность «администратор с настраиваемыми правами». При использовании флагов <code class="docutils literal notranslate"><span class="pre">can_*</span></code> можно про это не думать: в старых приложениях ничего не сломается.</p>
+</div>
+<div class="section" id="features-json">
+<h2><code class="docutils literal notranslate"><span class="pre">/features.json</span></code><a class="headerlink" href="#features-json" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В корне есть файл <code class="docutils literal notranslate"><span class="pre">features.json</span></code> с полями, которые зависят от инсталляции. На разных нодах могут быть включены разные возможности.</p>
+<p>Файл не является частью API. У API может меняться версия, старые версии могут отключаться, меняться способ авторизации. А этот файл будет на этом месте всё время.</p>
+<p>Также есть обёртка <code class="docutils literal notranslate"><span class="pre">features.js</span></code> . Достаточно включить её как скрипт, и она создаст window.FEATURES.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="misc_paths.html" class="btn btn-neutral float-right" title="Остальные пути" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Документация Tdproto" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright .
+
+    </p>
+  </div>
+    
+    
+    
+    Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
