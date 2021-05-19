@@ -152,14 +152,11 @@
       <li>Остальные пути</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-            <a href="_sources/misc_paths.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
-          
-        
-      </li>
-    
+    <li class="wy-breadcrumbs-aside">
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/">🇺🇸</a>
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-ru/">🇷🇺</a>
+    </li>
+
   </ul>
 
   
@@ -324,6 +321,54 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 <li><p><strong>result</strong> (<em>string</em>) – Задано на «pong»</p></li>
+</ul>
+</dd>
+<dt class="field-even">Код статуса</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api​-v4​-reactions">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/reactions</span></span><a class="headerlink" href="#get--api​-v4​-reactions" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получить список доступных реакций.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_reactions">Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Код статуса</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api​-v4​-time">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/time</span></span><a class="headerlink" href="#get--api​-v4​-time" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получить время на сервере.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_time">Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Код статуса</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get-features.json">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">features.json</span></span><a class="headerlink" href="#get-features.json" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получить информацию о сервере.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/getfeatures_json">Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Ответный JSON объект</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-features"><span class="std std-ref">Features</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Код статуса</dt>
