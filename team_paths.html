@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Team related paths &mdash; документация Tdproto docs </title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.svg"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Chat related paths" href="chat_paths.html" />
+    <link rel="prev" title="How to create bot." href="bot_howto.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Tdproto docs
+          
+
+          
+            
+            <img src="_static/logo.svg" class="logo" alt="Логотип"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Team related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">События клиента</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html#server-events">События сервера</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_index.html">Индекс Enum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_index.html#type-aliases">Псевдонимы типов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_index.html#json-objects-index">Индекс JSON объектов</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tdproto docs</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Team related paths</li>
+    
+    
+    <li class="wy-breadcrumbs-aside">
+        
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/team_paths">🇺🇸</a>
+        
+    </li>
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="team-related-paths">
+<h1>Team related paths<a class="headerlink" href="#team-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Get the list of chats in the team.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Array of Objects</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>object</em>) – List of <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-contacts-">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-contacts-" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Get the list of contacts of the team.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Array of Objects</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>object</em>) – List of <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> objects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_uid">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Get my contact info.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Array of Objects</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>object</em>) – My <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Status Codes</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-contacts">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-contacts" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Add new contant to the team. Requires <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object
+as input with phone number set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>phone</strong> (<em>string</em>) – Phone number of new contact.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Array of Objects</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>result</strong> (<em>object</em>) – New <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> object.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Status Codes</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="chat_paths.html" class="btn btn-neutral float-right" title="Chat related paths" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="bot_howto.html" class="btn btn-neutral float-left" title="How to create bot." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <li><a href="https://github.com/tada-team/tdproto-sphinx/">Project Homepage</a> &raquo;</li>
+    
+    <p>
+        &#169; Copyright .
+
+    </p>
+
+  </div>
+    
+    
+    
+    Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

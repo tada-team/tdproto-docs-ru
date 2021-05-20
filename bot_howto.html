@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Алфавитный указатель &mdash; документация Tdproto docs </title>
+  <title>How to create bot. &mdash; документация Tdproto docs </title>
   
 
   
@@ -42,8 +42,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-    <link rel="index" title="Алфавитный указатель" href="#" />
-    <link rel="search" title="Поиск" href="search.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Team related paths" href="team_paths.html" />
+    <link rel="prev" title="Основы" href="basics.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,9 +93,14 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to create bot.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-new-bot-account">Create new bot account.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-the-token-header">Using the token header.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#available-http-paths">Available HTTP paths.</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
@@ -152,12 +159,12 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Алфавитный указатель</li>
+      <li>How to create bot.</li>
     
     
     <li class="wy-breadcrumbs-aside">
         
-        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/genindex">🇺🇸</a>
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/bot_howto">🇺🇸</a>
         
     </li>
 
@@ -169,11 +176,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-
-<h1 id="index">Алфавитный указатель</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="how-to-create-bot">
+<h1>How to create bot.<a class="headerlink" href="#how-to-create-bot" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="create-new-bot-account">
+<h2>Create new bot account.<a class="headerlink" href="#create-new-bot-account" title="Ссылка на этот заголовок">¶</a></h2>
+<p>In order to create new bot account use the
+<code class="docutils literal notranslate"><span class="pre">/newbot</span> <span class="pre">{NAME}</span></code> command in <code class="docutils literal notranslate"><span class="pre">&#64;TadaBot</span></code> direct chat.</p>
+<p>Only admins have ability to create new chats.</p>
+</div>
+<div class="section" id="using-the-token-header">
+<h2>Using the token header.<a class="headerlink" href="#using-the-token-header" title="Ссылка на этот заголовок">¶</a></h2>
+<p>After creating the new bot account the new authorization
+token should be returned in the same chat.</p>
+<p>You need to use this token in all HTTP request headers
+under the key name <code class="docutils literal notranslate"><span class="pre">token</span></code>. Please consult your HTTP client
+library on how to add new HTTP header.</p>
+</div>
+<div class="section" id="available-http-paths">
+<h2>Available HTTP paths.<a class="headerlink" href="#available-http-paths" title="Ссылка на этот заголовок">¶</a></h2>
+<p>See the paths documentations:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="team_paths.html"><span class="doc">Team related paths</span></a></p></li>
+<li><p><a class="reference internal" href="chat_paths.html"><span class="doc">Chat related paths</span></a></p></li>
+<li><p><a class="reference internal" href="task_paths.html"><span class="doc">Task related paths</span></a></p></li>
+<li><p><a class="reference internal" href="group_paths.html"><span class="doc">Group related paths</span></a></p></li>
+<li><p><a class="reference internal" href="misc_paths.html"><span class="doc">Остальные пути</span></a></p></li>
+</ul>
+</div>
 </div>
 
 
@@ -181,6 +210,10 @@
            
           </div>
           <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="team_paths.html" class="btn btn-neutral float-right" title="Team related paths" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="basics.html" class="btn btn-neutral float-left" title="Основы" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
 
   <hr/>
 
