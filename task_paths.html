@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Task related paths &mdash; документация Tdproto docs </title>
+  <title>Пути относящиеся к задачам &mdash; документация Tdproto docs </title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
-    <link rel="next" title="Group related paths" href="group_paths.html" />
-    <link rel="prev" title="Chat related paths" href="chat_paths.html" /> 
+    <link rel="next" title="Пути относящиеся к группам" href="group_paths.html" />
+    <link rel="prev" title="Пути относящиеся в чатам." href="chat_paths.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,11 +95,11 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Chat related paths</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Task related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам.</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Пути относящиеся к задачам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Пути относящиеся к группам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">События клиента</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">События сервера</a></li>
@@ -154,7 +154,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Task related paths</li>
+      <li>Пути относящиеся к задачам</li>
     
     
     <li class="wy-breadcrumbs-aside">
@@ -172,35 +172,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="task-related-paths">
-<h1>Task related paths<a class="headerlink" href="#task-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Пути относящиеся к задачам<a class="headerlink" href="#task-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
 <dl class="http post">
 <dt class="sig sig-object http" id="post--api-v4-teams-%s-tasks">
 <span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/%s/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-%s-tasks" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Create new task.</p>
+<dd><p>Создать новую задачу.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
+<li><p><strong>team_uid</strong> – UID команды.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Request JSON Object</dt>
+<dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>task</strong> (<em>object</em>) – TODO: document <code class="docutils literal notranslate"><span class="pre">Task</span></code> object.</p></li>
+<li><p><strong>task</strong> (<em>object</em>) – TODO: документировать <code class="docutils literal notranslate"><span class="pre">Task</span></code> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">Ответный JSON объект</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Array of Objects</dt>
+<dt class="field-even">JSON список ответных объектов</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>result</strong> (<em>object</em>) – TODO: document <code class="docutils literal notranslate"><span class="pre">Task</span></code> object.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – TODO: документировать <code class="docutils literal notranslate"><span class="pre">Task</span></code> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Status Codes</dt>
+<dt class="field-odd">Код статуса</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error.</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
 </dl>
@@ -214,8 +214,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="group_paths.html" class="btn btn-neutral float-right" title="Group related paths" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="chat_paths.html" class="btn btn-neutral float-left" title="Chat related paths" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="group_paths.html" class="btn btn-neutral float-right" title="Пути относящиеся к группам" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="chat_paths.html" class="btn btn-neutral float-left" title="Пути относящиеся в чатам." accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
     </div>
 
   <hr/>

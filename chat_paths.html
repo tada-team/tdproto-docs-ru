@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Chat related paths &mdash; документация Tdproto docs </title>
+  <title>Пути относящиеся в чатам. &mdash; документация Tdproto docs </title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
-    <link rel="next" title="Task related paths" href="task_paths.html" />
-    <link rel="prev" title="Team related paths" href="team_paths.html" /> 
+    <link rel="next" title="Пути относящиеся к задачам" href="task_paths.html" />
+    <link rel="prev" title="Пути относящиеся к командам" href="team_paths.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,11 +95,11 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">How to create bot.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Team related paths</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Chat related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="task_paths.html">Task related paths</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Group related paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Пути относящиеся в чатам.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="task_paths.html">Пути относящиеся к задачам</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_paths.html">Пути относящиеся к группам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">События клиента</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">События сервера</a></li>
@@ -154,7 +154,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Chat related paths</li>
+      <li>Пути относящиеся в чатам.</li>
     
     
     <li class="wy-breadcrumbs-aside">
@@ -172,31 +172,31 @@
            <div itemprop="articleBody">
             
   <div class="section" id="chat-related-paths">
-<h1>Chat related paths<a class="headerlink" href="#chat-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Пути относящиеся в чатам.<a class="headerlink" href="#chat-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
 <dl class="http post">
 <dt class="sig sig-object http" id="post--api-v4-teams-team_uid-chats-chat_jid-messages">
 <span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-chats-chat_jid-messages" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Send text message to chat.</p>
+<dd><p>Послать сообщение в чат.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>chat_jid</strong> – JID of the chat.</p></li>
+<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>chat_jid</strong> – JID чата.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Request JSON Object</dt>
+<dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>message</strong> (<em>object</em>) – New <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> object.</p></li>
+<li><p><strong>message</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">JSON объект ответа</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 </ul>
 </dd>
-<dt class="field-even">Status Codes</dt>
+<dt class="field-even">Код статуса</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
 </dl>
@@ -205,30 +205,30 @@
 <dl class="http get">
 <dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats-chat_jid-messages">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats-chat_jid-messages" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Get the chat messages.</p>
+<dd><p>Получить сообщения чата.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>chat_jid</strong> – JID of the chat.</p></li>
+<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>chat_jid</strong> – JID чата.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Request JSON Object</dt>
+<dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>filter</strong> (<em>object</em>) – TODO: document filter object.</p></li>
+<li><p><strong>filter</strong> (<em>object</em>) – TODO: документировать объект фильтра.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">JSON объект ответа</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 </ul>
 </dd>
 <dt class="field-even">Resjsonarray object messages</dt>
-<dd class="field-even"><p>List of <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> objects.</p>
+<dd class="field-even"><p>Список <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объектов.</p>
 </dd>
-<dt class="field-odd">Status Codes</dt>
+<dt class="field-odd">Код статуса</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
 </dl>
@@ -237,23 +237,23 @@
 <dl class="http delete">
 <dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-chats-chat_jid-messages-message_id">
 <span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages/{message_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-chats-chat_jid-messages-message_id" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Delete message.</p>
+<dd><p>Удалить сообщение.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID of the team.</p></li>
-<li><p><strong>chat_jid</strong> – JID of the chat.</p></li>
-<li><p><strong>message_id</strong> – Message id to delete.</p></li>
+<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>chat_jid</strong> – JID чата.</p></li>
+<li><p><strong>message_id</strong> – Id сообщения которое удалить.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object</dt>
+<dt class="field-even">JSON объект ответа</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True if no error occured.</p></li>
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Status Codes</dt>
+<dt class="field-odd">Код статуса</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – No error</p></li>
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
 </dl>
@@ -267,8 +267,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="task_paths.html" class="btn btn-neutral float-right" title="Task related paths" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="team_paths.html" class="btn btn-neutral float-left" title="Team related paths" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="task_paths.html" class="btn btn-neutral float-right" title="Пути относящиеся к задачам" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="team_paths.html" class="btn btn-neutral float-left" title="Пути относящиеся к командам" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
     </div>
 
   <hr/>
