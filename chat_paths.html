@@ -174,28 +174,25 @@
   <div class="section" id="chat-related-paths">
 <h1>Пути относящиеся в чатам.<a class="headerlink" href="#chat-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats-chat_jid">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats-chat_jid" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-chats-chat_id">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{chat_id}</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-chats-chat_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить информацию чата.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__chats__chat_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>chat_id</strong> – ID чата.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект ответа</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">JSON объект запроса.</dt>
+<dt class="field-odd">Код статуса</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>message</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объект.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Код статуса</dt>
-<dd class="field-even"><ul class="simple">
 <li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
@@ -203,25 +200,26 @@
 </dd></dl>
 
 <dl class="http put">
-<dt class="sig sig-object http" id="put--api-v4-teams-team_uid-chats-chat_jid">
-<span class="sig-name descname"><span class="pre">PUT</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}</span></span><a class="headerlink" href="#put--api-v4-teams-team_uid-chats-chat_jid" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="put--api-v4-teams-team_id-chats-chat_id">
+<span class="sig-name descname"><span class="pre">PUT</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{chat_id}</span></span><a class="headerlink" href="#put--api-v4-teams-team_id-chats-chat_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Изменить настройки чата.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/put_api_v4_teams__team_id__chats__chat_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>chat_id</strong> – ID чата.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объекты.</p></li>
-<li><p><strong>message</strong> (<em>object</em>) – Обновленный <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объект.</p></li>
+<li><p><strong>object</strong> – Новый <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">JSON объект ответа</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-chat"><span class="std std-ref">Chat</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Код статуса</dt>
@@ -233,54 +231,25 @@
 </dd></dl>
 
 <dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-chats-chat_jid-messages">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-chats-chat_jid-messages" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="post--api-v4-teams-team_id-chats-chat_id-messages">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{chat_id}/messages</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-chats-chat_id-messages" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Послать сообщение в чат.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__team_id__chats__chat_id__messages">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>chat_id</strong> – ID чата.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>message</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">JSON объект ответа</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-</ul>
-</dd>
-<dt class="field-even">Код статуса</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats-chat_jid-messages">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats-chat_jid-messages" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить сообщения чата.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
-</ul>
-</dd>
-<dt class="field-even">JSON объект запроса.</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>filter</strong> (<em>object</em>) – TODO: документировать объект фильтра.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">JSON объект ответа</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>messages</strong> (<em>array</em>) – Список <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объектов.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Код статуса</dt>
@@ -292,26 +261,27 @@
 </dd></dl>
 
 <dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-chats-chat_jid-messages-message_id">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages/{message_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-chats-chat_jid-messages-message_id" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="post--api-v4-teams-team_id-chats-chat_id-messages-message_id">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{chat_id}/messages/{message_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-chats-chat_id-messages-message_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Изменить сообщение.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__team_id__chats__chat_id__messages__message_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
-<li><p><strong>message_id</strong> – Id сообщения которое изменить.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>chat_id</strong> – ID чата.</p></li>
+<li><p><strong>message_id</strong> – ID сообщения.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса.</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект с обновленными полями.</p></li>
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">JSON объект ответа</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – Обновленный <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Код статуса</dt>
@@ -323,21 +293,22 @@
 </dd></dl>
 
 <dl class="http delete">
-<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-chats-chat_jid-messages-message_id">
-<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats/{chat_jid}/messages/{message_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-chats-chat_jid-messages-message_id" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id-chats-chat_id-messages-message_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{chat_id}/messages/{message_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id-chats-chat_id-messages-message_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Удалить сообщение.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__chats__chat_id__messages__message_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-<li><p><strong>chat_jid</strong> – JID чата.</p></li>
-<li><p><strong>message_id</strong> – Id сообщения которое удалить.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>chat_id</strong> – ID чата.</p></li>
+<li><p><strong>message_id</strong> – ID сообщения.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект ответа</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект удаленного сообщения.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Код статуса</dt>

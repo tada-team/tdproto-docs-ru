@@ -177,6 +177,7 @@
 <dt class="sig sig-object http" id="get--api-v4-teams">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams</span></span><a class="headerlink" href="#get--api-v4-teams" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить список команд на сервере.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">JSON объект запроса</dt>
 <dd class="field-odd"><ul class="simple">
@@ -193,13 +194,14 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}</span></span><a class="headerlink" href="#get--api-v4-teams-team_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить информацию команды.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
@@ -217,19 +219,20 @@
 </dd></dl>
 
 <dl class="http put">
-<dt class="sig sig-object http" id="put--api-v4-teams-team_uid">
-<span class="sig-name descname"><span class="pre">PUT</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#put--api-v4-teams-team_uid" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="put--api-v4-teams-team_id">
+<span class="sig-name descname"><span class="pre">PUT</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}</span></span><a class="headerlink" href="#put--api-v4-teams-team_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Изменить настройки команды.</p>
 <p>Должны быть права администратора.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/put_api_v4_teams__team_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> объект как создать.</p></li>
+<li><p><strong>object</strong> – Обновленный <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">JSON объект запроса</dt>
@@ -247,14 +250,15 @@
 </dd></dl>
 
 <dl class="http delete">
-<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid">
-<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Удалить команду.</p>
 <p>Должны быть права администратора.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
@@ -272,13 +276,14 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-chats">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/chats</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-chats" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-chats">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-chats" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить список чатов в команде.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__chats">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
@@ -296,13 +301,14 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-contacts">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-contacts" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-contacts">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/contacts</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-contacts" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить список контактов в команде.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__contacts">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
@@ -319,43 +325,15 @@
 </dl>
 </dd></dl>
 
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-contacts">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-contacts" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Добавить новый контакт в команду. Требуется <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> объект с заданным номером телефона.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
-</ul>
-</dd>
-<dt class="field-even">JSON объект запроса</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>phone</strong> (<em>string</em>) – Номер телефона нового контакта.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">JSON объект запроса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – Новый <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> объект.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Код статуса</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api-v4-teams-team_uid-contacts-contact_id">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#get--api-v4-teams-team_uid-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/contacts/{contact_id}</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Получить информацию о контакте.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__contacts__contact_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 <li><p><strong>contact_id</strong> – ID контакта.</p></li>
 </ul>
 </dd>
@@ -374,19 +352,20 @@
 </dd></dl>
 
 <dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-team_uid-contacts-contact_id">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_uid-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="post--api-v4-teams-team_id-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/contacts/{contact_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Изменить детали контакта.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__team_id__contacts__contact_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 <li><p><strong>contact_id</strong> – ID контакта.</p></li>
 </ul>
 </dd>
 <dt class="field-even">JSON объект запроса</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>object</strong> – Обновленный <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> объект контакта.</p></li>
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-contact"><span class="std std-ref">Contact</span></a> объект.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">JSON объект запроса</dt>
@@ -404,14 +383,15 @@
 </dd></dl>
 
 <dl class="http delete">
-<dt class="sig sig-object http" id="delete--api-v4-teams-team_uid-contacts-contact_id">
-<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_uid}/contacts/{contact_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_uid-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id-contacts-contact_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/contacts/{contact_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id-contacts-contact_id" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Удалить контакт из команды.</p>
 <p>Должны быть права администратора.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__contacts__contact_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Параметры</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>team_id</strong> – ID команды.</p></li>
 <li><p><strong>contact_id</strong> – ID контакта.</p></li>
 </ul>
 </dd>

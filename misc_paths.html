@@ -174,22 +174,15 @@
   <div class="section" id="miscelaneos-paths">
 <h1>Остальные пути<a class="headerlink" href="#miscelaneos-paths" title="Ссылка на этот заголовок">¶</a></h1>
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-addr">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/addr</span></span><a class="headerlink" href="#get--api​-v4​-addr" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-addr">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/addr</span></span><a class="headerlink" href="#get--api-v4-addr" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Возвращает адрес клиента для отладки.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_addr">Попробуйте!</a></p>
-<p><strong>Пример ответа:</strong></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_addr">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Ответный JSON объект</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>string</em>) – Задано на «pong»</p></li>
+<li><p><strong>result</strong> (<em>string</em>) – Адрес сервера.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Код статуса</dt>
@@ -201,127 +194,10 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-alltimezones">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/alltimezones</span></span><a class="headerlink" href="#get-​-api​-v4​-alltimezones" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить список часовых поясов.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_alltimezones">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Код статуса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-countries">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/countries</span></span><a class="headerlink" href="#get-​-api​-v4​-countries" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить список государственных телефонных кодов.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_countries">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Код статуса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-emoji">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/emoji</span></span><a class="headerlink" href="#get--api​-v4​-emoji" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить список эмоджи.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_emoji">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Код статуса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http post">
-<dt class="sig sig-object http" id="post--api​-v4​-join​-token">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/join​/{token}</span></span><a class="headerlink" href="#post--api​-v4​-join​-token" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Присоединиться к команде.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_join__token_">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – Токен присоединения к команде</p></li>
-</ul>
-</dd>
-<dt class="field-even">Ответный JSON объект</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-team"><span class="std std-ref">Team</span></a> объект.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-join​-token​-preview">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/join​/{token}​/preview</span></span><a class="headerlink" href="#get--api​-v4​-join​-token​-preview" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Информация приглашения.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_join__token__preview">Попробуйте!</a></p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;result&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;blurhash&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;letters&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;lg&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">0</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;sm&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;height&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;width&quot;</span><span class="p">:</span> <span class="mi">0</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;stub&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>token</strong> – Токен предварительного просмотра.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Ответный JSON объект</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>object</em>) – Информация приглашения.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-​-api​-v4​-ping">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">​/api​/v4​/ping</span></span><a class="headerlink" href="#get-​-api​-v4​-ping" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="get--api-v4-ping">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/ping</span></span><a class="headerlink" href="#get--api-v4-ping" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Пинг запрос на сервер</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_ping">Попробуйте!</a></p>
-<p><strong>Пример ответа</strong></p>
-<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/javascript</span>
-
-<span class="p">{</span>
-  <span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="s2">&quot;pong&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_ping">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Ответный JSON объект</dt>
 <dd class="field-odd"><ul class="simple">
@@ -338,38 +214,10 @@
 </dd></dl>
 
 <dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-reactions">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/reactions</span></span><a class="headerlink" href="#get--api​-v4​-reactions" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить список доступных реакций.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_reactions">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Код статуса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get--api​-v4​-time">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api​/v4​/time</span></span><a class="headerlink" href="#get--api​-v4​-time" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить время на сервере.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_time">Попробуйте!</a></p>
-<dl class="field-list simple">
-<dt class="field-odd">Код статуса</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="http get">
-<dt class="sig sig-object http" id="get-features.json">
-<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">features.json</span></span><a class="headerlink" href="#get-features.json" title="Ссылка на это определение">¶</a></dt>
-<dd><p>Получить информацию о сервере.</p>
-<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/getfeatures_json">Попробуйте!</a></p>
+<dt class="sig sig-object http" id="get--features.json">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/features.json</span></span><a class="headerlink" href="#get--features.json" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получить информацию о характерных чертах сервера.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_features.json">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Ответный JSON объект</dt>
 <dd class="field-odd"><ul class="simple">

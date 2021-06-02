@@ -181,9 +181,7 @@
 
    <div class="modindex-jumpbox">
    <a href="#cap-/api"><strong>/api</strong></a> | 
-   <a href="#cap-/api​"><strong>/api​</strong></a> | 
-   <a href="#cap-/features.json"><strong>/features.json</strong></a> | 
-   <a href="#cap-/​"><strong>/​</strong></a>
+   <a href="#cap-/features.json"><strong>/features.json</strong></a>
    </div>
 
    <table class="indextable modindextable">
@@ -193,47 +191,52 @@
      <tr>
        <td></td>
        <td>
+       <a href="misc_paths.html#get--api-v4-addr"><code class="xref">GET /api/v4/addr</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="misc_paths.html#get--api-v4-ping"><code class="xref">GET /api/v4/ping</code></a></td><td>
+       <em></em></td></tr>
+     <tr>
+       <td></td>
+       <td>
        <a href="team_paths.html#get--api-v4-teams"><code class="xref">GET /api/v4/teams</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#get--api-v4-teams-team_uid"><code class="xref">GET /api/v4/teams/{team_uid}</code></a></td><td>
+       <a href="team_paths.html#get--api-v4-teams-team_id"><code class="xref">GET /api/v4/teams/{team_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#get--api-v4-teams-team_uid-chats"><code class="xref">GET /api/v4/teams/{team_uid}/chats</code></a></td><td>
+       <a href="team_paths.html#get--api-v4-teams-team_id-chats"><code class="xref">GET /api/v4/teams/{team_id}/chats</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#get--api-v4-teams-team_uid-chats-chat_jid"><code class="xref">GET /api/v4/teams/{team_uid}/chats/{chat_jid}</code></a></td><td>
+       <a href="chat_paths.html#get--api-v4-teams-team_id-chats-chat_id"><code class="xref">GET /api/v4/teams/{team_id}/chats/{chat_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#get--api-v4-teams-team_uid-chats-chat_jid-messages"><code class="xref">GET /api/v4/teams/{team_uid}/chats/{chat_jid}/messages</code></a></td><td>
+       <a href="team_paths.html#get--api-v4-teams-team_id-contacts"><code class="xref">GET /api/v4/teams/{team_id}/contacts</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#get--api-v4-teams-team_uid-contacts"><code class="xref">GET /api/v4/teams/{team_uid}/contacts</code></a></td><td>
+       <a href="team_paths.html#get--api-v4-teams-team_id-contacts-contact_id"><code class="xref">GET /api/v4/teams/{team_id}/contacts/{contact_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#get--api-v4-teams-team_uid-contacts-contact_id"><code class="xref">GET /api/v4/teams/{team_uid}/contacts/{contact_id}</code></a></td><td>
+       <a href="group_paths.html#get--api-v4-teams-team_id-groups"><code class="xref">GET /api/v4/teams/{team_id}/groups</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="group_paths.html#get--api-v4-teams-team_uid-groups"><code class="xref">GET /api/v4/teams/{team_uid}/groups</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="group_paths.html#get--api-v4-teams-team_uid-groups-group_id-members"><code class="xref">GET /api/v4/teams/{team_uid}/groups/{group_id}/members</code></a></td><td>
+       <a href="group_paths.html#get--api-v4-teams-team_id-groups-group_id-members"><code class="xref">GET /api/v4/teams/{team_id}/groups/{group_id}/members</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
@@ -243,100 +246,52 @@
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#post--api-v4-teams-team_uid-chats-chat_jid-messages"><code class="xref">POST /api/v4/teams/{team_uid}/chats/{chat_jid}/messages</code></a></td><td>
+       <a href="chat_paths.html#post--api-v4-teams-team_id-chats-chat_id-messages"><code class="xref">POST /api/v4/teams/{team_id}/chats/{chat_id}/messages</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#post--api-v4-teams-team_uid-chats-chat_jid-messages-message_id"><code class="xref">POST /api/v4/teams/{team_uid}/chats/{chat_jid}/messages/{message_id}</code></a></td><td>
+       <a href="chat_paths.html#post--api-v4-teams-team_id-chats-chat_id-messages-message_id"><code class="xref">POST /api/v4/teams/{team_id}/chats/{chat_id}/messages/{message_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#post--api-v4-teams-team_uid-contacts"><code class="xref">POST /api/v4/teams/{team_uid}/contacts</code></a></td><td>
+       <a href="team_paths.html#post--api-v4-teams-team_id-contacts-contact_id"><code class="xref">POST /api/v4/teams/{team_id}/contacts/{contact_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#post--api-v4-teams-team_uid-contacts-contact_id"><code class="xref">POST /api/v4/teams/{team_uid}/contacts/{contact_id}</code></a></td><td>
+       <a href="team_paths.html#put--api-v4-teams-team_id"><code class="xref">PUT /api/v4/teams/{team_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="group_paths.html#post--api-v4-teams-team_uid-groups"><code class="xref">POST /api/v4/teams/{team_uid}/groups</code></a></td><td>
+       <a href="chat_paths.html#put--api-v4-teams-team_id-chats-chat_id"><code class="xref">PUT /api/v4/teams/{team_id}/chats/{chat_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="group_paths.html#post--api-v4-teams-team_uid-groups-group_id-members"><code class="xref">POST /api/v4/teams/{team_uid}/groups/{group_id}/members</code></a></td><td>
+       <a href="team_paths.html#delete--api-v4-teams-team_id"><code class="xref">DELETE /api/v4/teams/{team_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#put--api-v4-teams-team_uid"><code class="xref">PUT /api/v4/teams/{team_uid}</code></a></td><td>
+       <a href="chat_paths.html#delete--api-v4-teams-team_id-chats-chat_id-messages-message_id"><code class="xref">DELETE /api/v4/teams/{team_id}/chats/{chat_id}/messages/{message_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#put--api-v4-teams-team_uid-chats-chat_jid"><code class="xref">PUT /api/v4/teams/{team_uid}/chats/{chat_jid}</code></a></td><td>
+       <a href="team_paths.html#delete--api-v4-teams-team_id-contacts-contact_id"><code class="xref">DELETE /api/v4/teams/{team_id}/contacts/{contact_id}</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="team_paths.html#delete--api-v4-teams-team_uid"><code class="xref">DELETE /api/v4/teams/{team_uid}</code></a></td><td>
+       <a href="group_paths.html#delete--api-v4-teams-team_id-groups"><code class="xref">DELETE /api/v4/teams/{team_id}/groups</code></a></td><td>
        <em></em></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="chat_paths.html#delete--api-v4-teams-team_uid-chats-chat_jid-messages-message_id"><code class="xref">DELETE /api/v4/teams/{team_uid}/chats/{chat_jid}/messages/{message_id}</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="team_paths.html#delete--api-v4-teams-team_uid-contacts-contact_id"><code class="xref">DELETE /api/v4/teams/{team_uid}/contacts/{contact_id}</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="group_paths.html#delete--api-v4-teams-team_uid-groups-group_id"><code class="xref">DELETE /api/v4/teams/{team_uid}/groups/{group_id}</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="group_paths.html#delete--api-v4-teams-team_uid-groups-group_id-members-contact_id"><code class="xref">DELETE /api/v4/teams/{team_uid}/groups/{group_id}/members/{contact_id}</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-/api​"><td></td><td>
-       <strong>/api​</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get--api​-v4​-addr"><code class="xref">GET /api​/v4​/addr</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get--api​-v4​-emoji"><code class="xref">GET /api​/v4​/emoji</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get--api​-v4​-join​-token​-preview"><code class="xref">GET /api​/v4​/join​/{token}​/preview</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get--api​-v4​-reactions"><code class="xref">GET /api​/v4​/reactions</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get--api​-v4​-time"><code class="xref">GET /api​/v4​/time</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#post--api​-v4​-join​-token"><code class="xref">POST /api​/v4​/join​/{token}</code></a></td><td>
+       <a href="group_paths.html#delete--api-v4-teams-team_id-groups-group_id-members-contact_id"><code class="xref">DELETE /api/v4/teams/{team_id}/groups/{group_id}/members/{contact_id}</code></a></td><td>
        <em></em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-/features.json"><td></td><td>
@@ -344,25 +299,7 @@
      <tr>
        <td></td>
        <td>
-       <a href="misc_paths.html#get-features.json"><code class="xref">GET features.json</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-/​"><td></td><td>
-       <strong>/​</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get-​-api​-v4​-alltimezones"><code class="xref">GET ​/api​/v4​/alltimezones</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get-​-api​-v4​-countries"><code class="xref">GET ​/api​/v4​/countries</code></a></td><td>
-       <em></em></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="misc_paths.html#get-​-api​-v4​-ping"><code class="xref">GET ​/api​/v4​/ping</code></a></td><td>
+       <a href="misc_paths.html#get--features.json"><code class="xref">GET /features.json</code></a></td><td>
        <em></em></td></tr>
    </table>
 
