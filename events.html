@@ -642,15 +642,17 @@
 </div>
 <div class="section" id="server-call-state">
 <h2>server.call.state<a class="headerlink" href="#server-call-state" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Параметры звонка или номер участников изменены</p>
+<p>Информация о звонке</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> - Запись звонка включена</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> - Звонок гудит</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> - Звонок окончен, если существует</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - время создания в формате iso</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> - Звонок окончен</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> - Версия</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> - Участники звонка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> - Начало звонка, если существует</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - Начало события. FIXME: why not gentime?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> - Начало звонка. Для прямых звонков может быть пустым во время гудка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> - Устарело: используйте поля <code class="docutils literal notranslate"><span class="pre">gentime</span></code> или <code class="docutils literal notranslate"><span class="pre">created</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Id звонка</p></li>
 </ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>

@@ -411,13 +411,19 @@
 </div>
 <div class="section" id="callevent">
 <span id="tdproto-callevent"></span><h2>CallEvent<a class="headerlink" href="#callevent" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Информация аудио звонка</p>
+<p>Информация звонка</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Начало звонка. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Окончание звонка. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата или контакта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Id звонка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> (boolean) - Звонок гудит. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Дата создания, iso datetime</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Начало звонка. Для прямых звонков может быть пустым во время гудка. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Окончание звонка. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Запись звонка включена</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>) - Участники звонка. Возможно поле будет отсутствовать.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Версия</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Устарело: используйте <code class="docutils literal notranslate"><span class="pre">gentime</span></code> или <code class="docutils literal notranslate"><span class="pre">created</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="callonliner">
@@ -631,7 +637,8 @@
 <p>Государство для отображения телефонных номеров на странице логина</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> (string) - Код государства</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> (string) - Код номера телефона</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">code</span></code> (string) - ISO код государства</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Имя государства</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (boolean) - Выбрано по умолчанию. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">popular</span></code> (boolean) - Популярно значит должно быть кэшировано. Возможно поле будет отсутствовать</p></li>
@@ -736,7 +743,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True при установки на внешний сервер</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Название установки</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) - Название установки. Используется на входной странице. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">background</span></code> (string) - Ссылка на изображение на заднем фоне если существует. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background</span></code> (string) - Ссылка на изображение на заднем фоне приложения если существует. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background</span></code> (string) - Ссылка на изображение на заднем фоне веб страницы если существует. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_testing</span></code> (boolean) - Установка для тестирования</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrika</span></code> (string) - Id счетчика Yandex метрики</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_search_length</span></code> (number) - Мнимальное количество букв чтобы начать глобальный поиск</p></li>
@@ -762,6 +770,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">wiki_pages</span></code> (boolean) - Вики страницы в чатах. Экспериментально</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allow_admin_mute</span></code> (boolean) - . Вики страницы в чатах. Экспериментально. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_wallpaper</span></code> (<a class="reference internal" href="#tdproto-wallpaper"><span class="std std-ref">Wallpaper</span></a>) - Ссылка на обои по умолчанию для мобильных приложений если существует. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">support_email</span></code> (string) - email поддержки</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_checklist</span></code> (boolean) - Устарело</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readonly_groups</span></code> (boolean) - Устарело</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_dashboard</span></code> (boolean) - Устарело</p></li>
@@ -1071,7 +1080,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Id звонка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Начало звонка. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Начало звонка. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">online_count</span></code> (number) - Количество участников звонка. Возможно поле будет отсутствовать</p></li>
 </ul>
 </div>

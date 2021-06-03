@@ -319,6 +319,95 @@
 </dl>
 </dd></dl>
 
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-v4-teams-team_id-chats-contact_id-messages">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{contact_id}/messages</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-chats-contact_id-messages" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Послать сообщение в прямой чат.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__team_id__chats__contact_id__messages">🔍 Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>contact_id</strong> – ID контакта.</p></li>
+</ul>
+</dd>
+<dt class="field-even">JSON объект запроса.</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">JSON объект ответа</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+</ul>
+</dd>
+<dt class="field-even">Код статуса</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http post">
+<dt class="sig sig-object http" id="post--api-v4-teams-team_id-chats-contact_id-messages-message_id">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{contact_id}/messages/{message_id}</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-chats-contact_id-messages-message_id" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Изменить сообщение в прямом чате.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__team_id__chats__contact_id__messages__message_id_">🔍 Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>contact_id</strong> – ID контакта.</p></li>
+<li><p><strong>message_id</strong> – ID сообщения.</p></li>
+</ul>
+</dd>
+<dt class="field-even">JSON объект запроса.</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">JSON объект ответа</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Код статуса</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="http delete">
+<dt class="sig sig-object http" id="delete--api-v4-teams-team_id-chats-contact_id-messages-message_id">
+<span class="sig-name descname"><span class="pre">DELETE</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/chats/{contact_id}/messages/{message_id}</span></span><a class="headerlink" href="#delete--api-v4-teams-team_id-chats-contact_id-messages-message_id" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Удалить сообщение из прямого чата.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__chats__contact_id__messages__message_id_">🔍 Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+<li><p><strong>contact_id</strong> – ID контакта.</p></li>
+<li><p><strong>message_id</strong> – ID сообщения.</p></li>
+</ul>
+</dd>
+<dt class="field-even">JSON объект ответа</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-message"><span class="std std-ref">Message</span></a> объект.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Код статуса</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
