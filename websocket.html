@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Как создать бота. &mdash; документация Tdproto docs </title>
+  <title>Документация Websocket &mdash; документация Tdproto docs </title>
   
 
   
@@ -44,8 +44,8 @@
     
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
-    <link rel="next" title="Пути относящиеся к командам" href="team_paths.html" />
-    <link rel="prev" title="Основы" href="basics.html" /> 
+    <link rel="next" title="События клиента" href="events.html" />
+    <link rel="prev" title="Остальные пути" href="misc_paths.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,18 +95,18 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Как создать бота.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#create-new-bot-account">Создать новую учетную запись бота.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-the-token-header">Как использовать токен бота.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#available-http-paths">Доступные HTTP пути.</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Пути относящиеся к задачам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group_paths.html">Пути относящиеся к группам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
-<li class="toctree-l1"><a class="reference internal" href="websocket.html">Документация Websocket</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Документация Websocket</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#connecting-to-websocket">Подключение к websocket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#event-json-objects">JSON объекты событий</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-events">Список событий</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">События клиента</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html#server-events">События сервера</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_index.html">Индекс Enum</a></li>
@@ -160,12 +160,12 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Как создать бота.</li>
+      <li>Документация Websocket</li>
     
     
     <li class="wy-breadcrumbs-aside">
         
-        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/bot_howto">🇺🇸</a>
+        <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/websocket">🇺🇸</a>
         
     </li>
 
@@ -177,28 +177,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-create-bot">
-<h1>Как создать бота.<a class="headerlink" href="#how-to-create-bot" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="section" id="create-new-bot-account">
-<h2>Создать новую учетную запись бота.<a class="headerlink" href="#create-new-bot-account" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Чтобы создать новую учетную запись бота используйте <code class="docutils literal notranslate"><span class="pre">/newbot</span> <span class="pre">{NAME}</span></code> команду в прямом чате <code class="docutils literal notranslate"><span class="pre">&#64;TadaBot</span></code>.</p>
-<p>Только администраторы обладают возможность создавать новых ботов.</p>
+  <div class="section" id="websockets-documentation">
+<h1>Документация Websocket<a class="headerlink" href="#websockets-documentation" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Websocket - это полно-дуплексный протокол связи. <a class="reference external" href="https://ru.wikipedia.org/wiki/WebSocket">Страница в Википедии</a> об этом протоколе.</p>
+<p>В tada.team websockets используются для уведомления клиентов о событиях и голосовых вызовах.</p>
+<div class="section" id="connecting-to-websocket">
+<h2>Подключение к websocket<a class="headerlink" href="#connecting-to-websocket" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Ссылка чтобы присоединиться к websocket имеет форму <code class="docutils literal notranslate"><span class="pre">wss://web.tada.team/messaging/{team_id}</span></code> где team_id это JID команды для которой создать websocket. Это значит что для каждой команды нужен отдельное websocket соединение чтобы получать события из нескольких команд.</p>
+<p><code class="docutils literal notranslate"><span class="pre">web.tada.team</span></code> может быть заменено на другой домен.</p>
 </div>
-<div class="section" id="using-the-token-header">
-<h2>Как использовать токен бота.<a class="headerlink" href="#using-the-token-header" title="Ссылка на этот заголовок">¶</a></h2>
-<p>После создания нового бота в том же чате должен был быть опубликован токен авторизации нового бота.</p>
-<p>Вы должны использовать этот токен для во всех HTTP запросах headers в ключе <code class="docutils literal notranslate"><span class="pre">token</span></code>. Ознакомитесь с вашим HTTP клиентом чтобы узнать как добавить новый header для запросов.</p>
-</div>
-<div class="section" id="available-http-paths">
-<h2>Доступные HTTP пути.<a class="headerlink" href="#available-http-paths" title="Ссылка на этот заголовок">¶</a></h2>
-<p>HTTP пути описаны на этих страницах:</p>
+<div class="section" id="event-json-objects">
+<h2>JSON объекты событий<a class="headerlink" href="#event-json-objects" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Все события с сервера или на сервер должны быть завернуты в объект события.</p>
+<p>Объект события имеет следующие поля:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="team_paths.html"><span class="doc">Пути относящиеся к командам</span></a></p></li>
-<li><p><a class="reference internal" href="chat_paths.html"><span class="doc">Пути относящиеся в чатам.</span></a></p></li>
-<li><p><a class="reference internal" href="task_paths.html"><span class="doc">Пути относящиеся к задачам</span></a></p></li>
-<li><p><a class="reference internal" href="group_paths.html"><span class="doc">Пути относящиеся к группам</span></a></p></li>
-<li><p><a class="reference internal" href="misc_paths.html"><span class="doc">Остальные пути</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">event</span></code> (string) - Название события. Например, <code class="docutils literal notranslate"><span class="pre">&quot;client.activity&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">confirm_id</span></code> (string) - В основном используется для отладки. Должно быть случайная строка.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">params</span></code> (object) - Сам объект события.</p></li>
 </ul>
+<p>Пример:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+     <span class="nt">&quot;confirm_id&quot;</span><span class="p">:</span> <span class="s2">&quot;75a406625c58&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;event&quot;</span><span class="p">:</span> <span class="s2">&quot;client.activity&quot;</span><span class="p">,</span>
+     <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
+             <span class="nt">&quot;afk&quot;</span><span class="p">:</span> <span class="kc">true</span>
+     <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Это пример <a class="reference internal" href="events.html#client-activity"><span class="std std-ref">client.activity</span></a> события отправленного клиентом чтобы поставить статус AFK.</p>
+</div>
+<div class="section" id="list-of-events">
+<h2>Список событий<a class="headerlink" href="#list-of-events" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference internal" href="events.html#client-events"><span class="std std-ref">События клиента</span></a>. Эти события клиент может отправить на сервер.</p>
+<p><a class="reference internal" href="events.html#server-events"><span class="std std-ref">События сервера</span></a>. Эти события приходят с сервера.</p>
 </div>
 </div>
 
@@ -208,8 +220,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="team_paths.html" class="btn btn-neutral float-right" title="Пути относящиеся к командам" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="basics.html" class="btn btn-neutral float-left" title="Основы" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="events.html" class="btn btn-neutral float-right" title="События клиента" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="misc_paths.html" class="btn btn-neutral float-left" title="Остальные пути" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
     </div>
 
   <hr/>
