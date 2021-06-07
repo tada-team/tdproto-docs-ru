@@ -95,7 +95,7 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Пути относящиеся к задачам</a></li>
@@ -185,6 +185,7 @@
 <h2>Подключение к websocket<a class="headerlink" href="#connecting-to-websocket" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Ссылка чтобы присоединиться к websocket имеет форму <code class="docutils literal notranslate"><span class="pre">wss://web.tada.team/messaging/{team_id}</span></code> где team_id это JID команды для которой создать websocket. Это значит что для каждой команды нужен отдельное websocket соединение чтобы получать события из нескольких команд.</p>
 <p><code class="docutils literal notranslate"><span class="pre">web.tada.team</span></code> может быть заменено на другой домен.</p>
+<p>Для соединения с websocket необходима авторизация. Для авторизации нужно включить HTTP header <code class="docutils literal notranslate"><span class="pre">token</span></code> с токеном бота в запросе на соединение. Смотрите <a class="reference internal" href="bot_howto.html"><span class="doc">Как создать бота</span></a> o том как создать токен бота.</p>
 </div>
 <div class="section" id="event-json-objects">
 <h2>JSON объекты событий<a class="headerlink" href="#event-json-objects" title="Ссылка на этот заголовок">¶</a></h2>
