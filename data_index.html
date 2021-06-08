@@ -178,6 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#subtask">Subtask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switchercolors">SwitcherColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task">Задача</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcolor">TaskColor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcounters">TaskCounters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskfilter">TaskFilter</a></li>
@@ -1217,6 +1218,30 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Id тэга</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Имя тэга</p></li>
+</ul>
+</div>
+<div class="section" id="task">
+<span id="tdproto-task"></span><h2>Задача<a class="headerlink" href="#task" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Задача</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_color_index</span></code> (number) - Настраиваемый цвет задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Описание задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Id проекта / секции , если существует. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id подписчиков.. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (string) - Предметы задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Пользователь которому была дана задача. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Дедлайн задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) - Является ли эта задача публичной. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remind_at</span></code> (string) - Послать уведомление в данное время. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Статус задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">importance</span></code> (number) - Важность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Срочность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Сложность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Время затраченное на задачу. Возможно поле будет отсутствовать. Возможен null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (string) - Присоединенные сообщения. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (string) - Загрузки задачи. Возможно поле будет отсутствовать</p></li>
 </ul>
 </div>
 <div class="section" id="taskcolor">

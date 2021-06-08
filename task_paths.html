@@ -175,28 +175,24 @@
   <div class="section" id="task-related-paths">
 <h1>Пути относящиеся к задачам<a class="headerlink" href="#task-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
 <dl class="http post">
-<dt class="sig sig-object http" id="post--api-v4-teams-%s-tasks">
-<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/%s/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-%s-tasks" title="Ссылка на это определение">¶</a></dt>
+<dt class="sig sig-object http" id="post--api-v4-teams-task_id-tasks">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{task_id}/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-task_id-tasks" title="Ссылка на это определение">¶</a></dt>
 <dd><p>Создать новую задачу.</p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/post_api_v4_teams__task_id__tasks">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
+<dt class="field-odd">JSON объект запроса.</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>team_uid</strong> – UID команды.</p></li>
+<li><p><strong>object</strong> – <a class="reference internal" href="data_index.html#tdproto-task"><span class="std std-ref">Задача</span></a> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-even">JSON объект запроса.</dt>
+<dt class="field-even">Ответный JSON объект</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>task</strong> (<em>object</em>) – TODO: документировать <code class="docutils literal notranslate"><span class="pre">Task</span></code> объект.</p></li>
-</ul>
-</dd>
-<dt class="field-odd">Ответный JSON объект</dt>
-<dd class="field-odd"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
-<li><p><strong>result</strong> (<em>array</em>) – TODO: документировать <code class="docutils literal notranslate"><span class="pre">Task</span></code> объект.</p></li>
+<li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdproto-task"><span class="std std-ref">Задача</span></a> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Код статуса</dt>
-<dd class="field-even"><ul class="simple">
+<dt class="field-odd">Код статуса</dt>
+<dd class="field-odd"><ul class="simple">
 <li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
 </ul>
 </dd>
