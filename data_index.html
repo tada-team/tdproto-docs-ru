@@ -425,7 +425,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) - Начало звонка. Для прямых звонков может быть пустым во время гудка. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) - Окончание звонка. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Запись звонка включена</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>) - Участники звонка. Возможно поле будет отсутствовать.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (array[<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>]) - Участники звонка. Возможно поле будет отсутствовать.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Версия</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Устарело: используйте <code class="docutils literal notranslate"><span class="pre">gentime</span></code> или <code class="docutils literal notranslate"><span class="pre">created</span></code></p></li>
 </ul>
@@ -440,7 +440,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> (string) - Роль контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">icon</span></code> (string) - Иконка контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> (boolean) - Микрофон выключен. Вычисляется из состояния устройств</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<a class="reference internal" href="#tdproto-calldevice"><span class="std std-ref">CallDevice</span></a>) - Устройства участвующие, строго одно пока-что</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<a class="reference internal" href="#tdproto-calldevice"><span class="std std-ref">CallDevice</span></a>]) - Устройства участвующие, строго одно пока-что</p></li>
 </ul>
 </div>
 <div class="section" id="chat">
@@ -470,13 +470,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">last_message</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Обьект последнего сообщения. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_read_message_id</span></code> (string) - Id последнего прочитанного сообщения, если существует. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Id проекта / секции , если существует. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (string) - Список редактируемых полей. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) - Список редактируемых полей. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned</span></code> (boolean) - Закреплен ли чат на верху. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned_sort_ordering</span></code> (number) - Тип сортирования прикрепленного чата. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_members</span></code> (number) - Количество не архивированных участников. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) - Могу ли я удалить этот чат. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Описание группы или задачи. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - Markup объекты для описания. Экспериментально. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - Markup объекты для описания. Экспериментально. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">feed</span></code> (boolean) - Существует в feed (главный экран). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pinned_message</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Прикрепленные сообщения этого чата. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">color_index</span></code> (number) - индекс нестандартного цвета из таблицы цветов. Только в задачах. Возможно поле будет отсутствовать. Возможен null</p></li>
@@ -484,7 +484,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">num_checked_items</span></code> (number) - Количество отмеченных пунктов в чеклисте. Только в задачах. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id контакта уполномоченного. Только в задачах. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> (number) - Номер задачи в этой команде. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id подписчиков.. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (array[<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>]) - Id подписчиков.. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Создатель задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Статус задачи. Возможно не стандартное. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Титул задачи. Создается из номера и описания. Возможно поле будет отсутствовать</p></li>
@@ -493,18 +493,18 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Дедлайн задачи в iso формате, если существует. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline_expired</span></code> (boolean) - Просрочен ли дедлайн. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">links</span></code> (<a class="reference internal" href="#tdproto-messagelinks"><span class="std std-ref">MessageLinks</span></a>) - Ссылки в описании. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">importance</span></code> (number) - Важность задачи, если доступно в команде. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Срочность задачи, если доступно в команде. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Время затраченное на задачу. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Сложность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (any) - Используется для «Create task from messages…». Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - UID загрузок для запроса, объекты загрузок для ответа. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (<a class="reference internal" href="#tdproto-taskitem"><span class="std std-ref">TaskItem</span></a>) - предметы чеклиста. Только в задачах. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parents</span></code> (<a class="reference internal" href="#tdproto-subtask"><span class="std std-ref">Subtask</span></a>) - Родительские задачи. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tabs</span></code> (<a class="reference internal" href="#tdproto-tasktabkey"><span class="std std-ref">TaskTabKey</span></a>) - Имена закладок. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[any]) - Используется для «Create task from messages…». Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - UID загрузок для запроса, объекты загрузок для ответа. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (array[<a class="reference internal" href="#tdproto-taskitem"><span class="std std-ref">TaskItem</span></a>]) - предметы чеклиста. Только в задачах. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parents</span></code> (array[<a class="reference internal" href="#tdproto-subtask"><span class="std std-ref">Subtask</span></a>]) - Родительские задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tabs</span></code> (array[<a class="reference internal" href="#tdproto-tasktabkey"><span class="std std-ref">TaskTabKey</span></a>]) - Имена закладок. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) - Мой статус в групповом чате. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (<a class="reference internal" href="#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a>) - Участники группового чата. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">members</span></code> (array[<a class="reference internal" href="#tdproto-groupmembership"><span class="std std-ref">GroupMembership</span></a>]) - Участники группового чата. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_member</span></code> (boolean) - Могу ли я добавлять участников в этот групповой чат. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_remove_member</span></code> (boolean) - Могу ли я убирать участников из этого группового чата. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_change_member_status</span></code> (boolean) - Могу ли я менять статус участников этого группового чата. Возможно поле будет отсутствовать</p></li>
@@ -542,7 +542,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">section_enabled</span></code> (boolean) - Фильтр проектов включен. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Id проекта если фильтр по проектам включен. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags_enabled</span></code> (boolean) - Фильтр по тэгам включен. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Id тэгов если фильтр по тэгам включен. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) -  тэгов если фильтр по тэгам включен. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) - Статус задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance_enabled</span></code> (boolean) - Фильтр по важности включен. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance</span></code> (number) - Важность задачи если фильтр по важности включен. Возможно поле будет отсутствовать. Возможен null</p></li>
@@ -568,14 +568,14 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_team_rights</span></code> (boolean) - Могу добавлять пользователей в эту команду. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> (boolean) - Контакт удален. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">botname</span></code> (string) - Имя бота. Пустое для пользователей. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (string) - Id секции</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (array[string]) - Id секции</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_send_message</span></code> (boolean) - Могу ли я отправлять сообщения этому контакту. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) - Почему я не могу отправлять сообщения в этот чат (если не могу). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_call</span></code> (boolean) - Могу ли я звонить этому контакту. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_create_task</span></code> (boolean) - Могу ли я создавать задачи этому контакту. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_group</span></code> (boolean) - Могу ли я добавлять этого контакта в групповые чаты. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) - Могу ли я убрать этот контакт из команды. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (string) - Изменяемые поля. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) - Изменяемые поля. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Фамилия. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">given_name</span></code> (string) - Имя. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patronymic</span></code> (string) - Отчество если существует. Возможно поле будет отсутствовать</p></li>
@@ -714,7 +714,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">front_version</span></code> (string) - Версия веб приложения</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">app_title</span></code> (string) - Титул приложения</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">landing_url</span></code> (string) - Адрес изначальной страницы. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">app_schemes</span></code> (string) - Ссылки локальных приложений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">app_schemes</span></code> (array[string]) - Ссылки локальных приложений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userver</span></code> (string) - аддресс сервера с статическими файлами</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Ссылка в AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Ссылка в Google Play</p></li>
@@ -743,8 +743,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_qr_code</span></code> (boolean) - Аутентификация по QR-коду или ссылки включена. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_sms</span></code> (boolean) - SMS аутентификация включена. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_2fa</span></code> (boolean) - Двух факторная аутентификация включена. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">oauth_services</span></code> (<a class="reference internal" href="#tdproto-oauthservice"><span class="std std-ref">OAuthService</span></a>) - Внешние сервисы. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ice_servers</span></code> (<a class="reference internal" href="#tdproto-iceserver"><span class="std std-ref">ICEServer</span></a>) - ICE серверы для WebRTC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oauth_services</span></code> (array[<a class="reference internal" href="#tdproto-oauthservice"><span class="std std-ref">OAuthService</span></a>]) - Внешние сервисы. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ice_servers</span></code> (array[<a class="reference internal" href="#tdproto-iceserver"><span class="std std-ref">ICEServer</span></a>]) - ICE серверы для WebRTC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True при установки на внешний сервер</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Название установки</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) - Название установки. Используется на входной странице. Возможно поле будет отсутствовать</p></li>
@@ -905,8 +905,8 @@
 <p>Полные данные об интеграции, как получены с сервера</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>) - Интеграции которые существуют на текущий момент</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>) - Типы интеграции доступные для установки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Интеграции которые существуют на текущий момент</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Типы интеграции доступные для установки</p></li>
 </ul>
 </div>
 <div class="section" id="markupentity">
@@ -922,7 +922,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Тип ссылки. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">repl</span></code> (string) - Замена текста. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> (string) - Тип времени. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">childs</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - Список внутренних markup единиц. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">childs</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - Список внутренних markup единиц. Возможно поле будет отсутствовать</p></li>
 </ul>
 </div>
 <div class="section" id="message">
@@ -941,7 +941,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">chat_type</span></code> (<a class="reference internal" href="#tdproto-chattype"><span class="std std-ref">ChatType</span></a>) - Тип чата</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">chat</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">links</span></code> (<a class="reference internal" href="#tdproto-messagelinks"><span class="std std-ref">MessageLinks</span></a>) - Внутренние/внешние ссылки. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>) - Единицы Markup. Экспериментально. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markup</span></code> (array[<a class="reference internal" href="#tdproto-markupentity"><span class="std std-ref">MarkupEntity</span></a>]) - Единицы Markup. Экспериментально. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">important</span></code> (boolean) - Флаг важности. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">edited</span></code> (string) - Дата и время изменения или удаления в формате ISO. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">received</span></code> (boolean) - Сообщение был увиденно кем либо. True или null. Возможно поле будет отсутствовать</p></li>
@@ -951,10 +951,10 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">prev</span></code> (string) - Id предыдущего сообщения в этом же чате. Uid или null. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_first</span></code> (boolean) - Это сообщение первое в этом чате. True или null. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) - Это сообщение первое в чате. True или null. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - Загрузки в сообщении. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>) - Реакции сообщения. Возможен null. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - Загрузки в сообщении. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (array[<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>]) - Реакции сообщения. Возможен null. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reply_to</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Сообщение которое было отвечено этим сообщением. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) - Пересланные сообщения. Возможен null. Также содержит двойник поля ReplyTo для обратной совместимости. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>]) - Пересланные сообщения. Возможен null. Также содержит двойник поля ReplyTo для обратной совместимости. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notice</span></code> (boolean) - Есть упоминание (&#64;). True или null. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">silently</span></code> (boolean) - Сообщение никого не уведомляет и не учитывается счетчиками. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">editable_until</span></code> (string) - Автор может изменить сообщение до этой даты и времени. Возможен null. Возможно поле будет отсутствовать</p></li>
@@ -1004,8 +1004,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">given_name</span></code> (string) - Имя личное (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Фамилия (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">patronymic</span></code> (string) - Отчество (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phones</span></code> (string) - Список номеров телефонов контакта (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (string) - Список email (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phones</span></code> (array[string]) - Список номеров телефонов контакта (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (array[string]) - Список email (для медиа типа «contact»). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stickerpack</span></code> (string) - Название упаковки стикеров (для медиа типа «sticker»). Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pdf_version</span></code> (<a class="reference internal" href="#tdproto-pdfversion"><span class="std std-ref">PdfVersion</span></a>) - PDF версия если существует. Возможно поле будет отсутствовать. Возможен null</p></li>
 </ul>
@@ -1019,7 +1019,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Внутренняя или внешняя ссылка</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Текст заменитель</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">preview</span></code> (<a class="reference internal" href="#tdproto-messagelinkpreview"><span class="std std-ref">MessageLinkPreview</span></a>) - Необязательная информация пред просмотра для веб сайтов. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>) - Необязательная информация о загрузках. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) - Необязательная информация о загрузках. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nopreview</span></code> (boolean) - Предварительный просмотр сайтов отключен. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">youtube_id</span></code> (string) - Необязательный Id ролика youtube . Возможно поле будет отсутствовать</p></li>
 </ul>
@@ -1058,7 +1058,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Эмоджи</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">counter</span></code> (number) - Количество реакций</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">details</span></code> (<a class="reference internal" href="#tdproto-messagereactiondetail"><span class="std std-ref">MessageReactionDetail</span></a>) - Детали</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">details</span></code> (array[<a class="reference internal" href="#tdproto-messagereactiondetail"><span class="std std-ref">MessageReactionDetail</span></a>]) - Детали</p></li>
 </ul>
 </div>
 <div class="section" id="messagereactiondetail">
@@ -1232,10 +1232,10 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_color_index</span></code> (number) - Настраиваемый цвет задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Описание задачи. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (array[string]) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Id проекта / секции , если существует. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id подписчиков. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (string) - Предметы задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (array[<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>]) - Id подписчиков. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (array[string]) - Предметы задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Пользователь которому была дана задача. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Дедлайн задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) - Является ли эта задача публичной. Возможно поле будет отсутствовать</p></li>
@@ -1245,8 +1245,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">urgency</span></code> (number) - Срочность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">complexity</span></code> (number) - Сложность задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">spent_time</span></code> (number) - Время затраченное на задачу. Возможно поле будет отсутствовать. Возможен null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (string) - Присоединенные сообщения. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (string) - Загрузки задачи. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linked_messages</span></code> (array[string]) - Присоединенные сообщения. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[string]) - Загрузки задачи. Возможно поле будет отсутствовать</p></li>
 </ul>
 </div>
 <div class="section" id="taskcolor">
@@ -1322,9 +1322,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_empty</span></code> (boolean) - Отключить ли вкладку если нет содержания</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">show_counter</span></code> (boolean) - Показывать значок непрочитанных</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pagination</span></code> (boolean) - Включить страницы</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (<a class="reference internal" href="#tdproto-taskfilter"><span class="std std-ref">TaskFilter</span></a>) - Фильтры внутри вкладки</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> (<a class="reference internal" href="#tdproto-tasksort"><span class="std std-ref">TaskSort</span></a>) - Сортировка доступна в вкладке</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unread_tasks</span></code> (<a class="reference internal" href="#tdproto-taskcounters"><span class="std std-ref">TaskCounters</span></a>) - Jid непрочитанных задач и счетчики</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filters</span></code> (array[<a class="reference internal" href="#tdproto-taskfilter"><span class="std std-ref">TaskFilter</span></a>]) - Фильтры внутри вкладки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> (array[<a class="reference internal" href="#tdproto-tasksort"><span class="std std-ref">TaskSort</span></a>]) - Сортировка доступна в вкладке</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unread_tasks</span></code> (array[<a class="reference internal" href="#tdproto-taskcounters"><span class="std std-ref">TaskCounters</span></a>]) - Jid непрочитанных задач и счетчики</p></li>
 </ul>
 </div>
 <div class="section" id="team">
@@ -1340,11 +1340,11 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">max_message_update_age</span></code> (number) - Максимальное время обновления или удаления сообщений в секундах</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">icons</span></code> (<a class="reference internal" href="#tdproto-icondata"><span class="std std-ref">IconData</span></a>) - Иконки команды</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_active</span></code> (boolean) - Последняя активность пользователя была в этой команде</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">changeable_statuses</span></code> (<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>) - Какие статусы я могу задавать другим участникам команды. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">changeable_statuses</span></code> (array[<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>]) - Какие статусы я могу задавать другим участникам команды. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bad_profile</span></code> (boolean) - Мой профиль в этой команде не полноценный. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">need_confirmation</span></code> (boolean) - Нудно подтверждение после приглашения в эту комманду</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use_patronymic</span></code> (boolean) - Использовать отчество в именах пользователей этой команды. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_fields</span></code> (string) - Порядок сортировки полей пользователей</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_fields</span></code> (array[string]) - Порядок сортировки полей пользователей</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_family_name_first</span></code> (boolean) - Фамилия должна быть первой в отображаемом имени. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use_task_importance</span></code> (boolean) - Использовать поле значимости в задачах. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_importance_min</span></code> (number) - Минимальное значение важности. По умолчанию 1. Возможно поле будет отсутствовать</p></li>
@@ -1357,7 +1357,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads_size_limit</span></code> (number) - Максимальный размер загрузок в байтах если существует. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unread</span></code> (<span class="xref std std-ref">tdproto-TeamUnread</span>) - Счетчик непрочитанных сообщений. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">me</span></code> (<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>) - Мой профиль в этой комманде</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contacts</span></code> (<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>) - Контакты команды. Только используется при создании комманды. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contacts</span></code> (array[<a class="reference internal" href="#tdproto-contact"><span class="std std-ref">Contact</span></a>]) - Контакты команды. Только используется при создании комманды. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">single_group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Для команд с одной группой jid чата. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (<a class="reference internal" href="#tdproto-theme"><span class="std std-ref">Theme</span></a>) - Цветовая тема если существует. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_archived_users</span></code> (boolean) - Не показывать архивированных пользователей по умолчанию. Возможно поле будет отсутствовать</p></li>
@@ -1544,8 +1544,8 @@
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inviter</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id того кто пригласил. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>) - Доступные команды</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<span class="xref std std-ref">tdproto-PushDevice</span>) - Зарегистрированные устройства для пушей</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (array[<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>]) - Доступные команды</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<span class="xref std std-ref">tdproto-PushDevice</span>]) - Зарегистрированные устройства для пушей</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phone</span></code> (string) - Телефон для входа. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (string) - Email для входа. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) - Фамилия. Возможно поле будет отсутствовать</p></li>
