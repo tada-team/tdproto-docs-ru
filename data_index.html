@@ -96,7 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Пути относящиеся к задачам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group_paths.html">Пути относящиеся к группам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
@@ -178,7 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#subtask">Subtask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switchercolors">SwitcherColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#task">Задача</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcolor">TaskColor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcounters">TaskCounters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskfilter">TaskFilter</a></li>
@@ -355,6 +355,7 @@
 </div>
 <div class="section" id="isodatetimestring">
 <span id="tdproto-isodatetimestring"></span><h2>ISODateTimeString<a class="headerlink" href="#isodatetimestring" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Дата и время в RFC3339 формате. Пример: <code class="docutils literal notranslate"><span class="pre">2019-09-18T00:00:07.435409Z</span></code></p>
 <p><strong>Базовый тип</strong>: string</p>
 </div>
 <div class="section" id="jid">
@@ -372,6 +373,7 @@
 </div>
 <div class="section" id="rgbcolor">
 <span id="tdproto-rgbcolor"></span><h2>RGBColor<a class="headerlink" href="#rgbcolor" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Цвет в <code class="docutils literal notranslate"><span class="pre">#rrggbb</span></code> формате где <code class="docutils literal notranslate"><span class="pre">rr</span></code>, <code class="docutils literal notranslate"><span class="pre">gg</span></code>, <code class="docutils literal notranslate"><span class="pre">bb</span></code> шестнадцатеричные цифры от 00 до ff красного, зеленого и синего канала соответственно. (например желтый будет <code class="docutils literal notranslate"><span class="pre">#ffff00</span></code>)</p>
 <p><strong>Базовый тип</strong>: string</p>
 </div>
 <div class="section" id="taskfilterkey">
@@ -717,7 +719,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Ссылка в AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Ссылка в Google Play</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Тема интерфейса по умолчанию</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_app_version</span></code> (string) - Минимальная версия приложения требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Минимальная версия приложения iOS требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Минимальная версия приложения Android требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">free_registration</span></code> (boolean) - Свободная регистрация разрешена</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_upload_mb</span></code> (number) - Максимальный размер загрузок пользователя</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_linked_messages</span></code> (number) - Максимальное количество пересылаемых сообщений</p></li>
@@ -760,7 +763,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_database_url</span></code> (string) - Настройки Firebase для веб пуш уведомлений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_project_id</span></code> (string) - Настройки Firebase для веб пуш уведомлений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">firebase_storage_bucket</span></code> (string) - Настройки Firebase для веб пуш уведомлений</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">calls</span></code> (boolean) - Звонки включены ли</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calls_version</span></code> (number) - Версия звонков. 0 = отключены, 1 = только аудио, 2 = аудио+видео</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mobile_calls</span></code> (boolean) - Звонки включены ли для мобильных приложений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">calls_record</span></code> (boolean) - Включена ли запись звонков</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">only_one_device_per_call</span></code> (boolean) - Запретить звонок с нескольких устройств. Экспериментально. Возможно поле будет отсутствовать</p></li>
@@ -779,6 +782,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">task_messages</span></code> (boolean) - Устарелло</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_public</span></code> (boolean) - Устарелло</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_tags</span></code> (boolean) - Устарело</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calls</span></code> (boolean) - Устарело</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_app_version</span></code> (string) - Устарело</p></li>
 </ul>
 </div>
 <div class="section" id="fontcolors">
@@ -1221,15 +1226,15 @@
 </ul>
 </div>
 <div class="section" id="task">
-<span id="tdproto-task"></span><h2>Задача<a class="headerlink" href="#task" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Задача</p>
+<span id="tdproto-task"></span><h2>Task<a class="headerlink" href="#task" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Task</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_color_index</span></code> (number) - Настраиваемый цвет задачи. Возможно поле будет отсутствовать. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) - Описание задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (string) - Список тэгов задачи, если существуют. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> (string) - Id проекта / секции , если существует. Возможно поле будет отсутствовать</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id подписчиков.. Возможно поле будет отсутствовать</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observers</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id подписчиков. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (string) - Предметы задачи. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Пользователь которому была дана задача. Возможно поле будет отсутствовать</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deadline</span></code> (string) - Дедлайн задачи. Возможно поле будет отсутствовать</p></li>

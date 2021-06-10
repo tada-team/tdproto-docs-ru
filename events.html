@@ -97,13 +97,14 @@
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота</a></li>
 <li class="toctree-l1"><a class="reference internal" href="team_paths.html">Пути относящиеся к командам</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_paths.html">Пути относящиеся в чатам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="task_paths.html">Пути относящиеся к задачам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group_paths.html">Пути относящиеся к группам</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misc_paths.html">Остальные пути</a></li>
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Документация Websocket</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">События клиента</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#client-activity">client.activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#client-call-answer">client.call.answer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-buzzcancel">client.call.buzzcancel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-leave">client.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#client-call-muteall">client.call.muteall</a></li>
@@ -126,6 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#server-call-checkfingerprint">server.call.checkfingerprint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-leave">server.call.leave</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-muteall">server.call.muteall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-call-offer">server.call.offer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-reject">server.call.reject</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-restart">server.call.restart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#server-call-sound">server.call.sound</a></li>
@@ -247,6 +249,15 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="client-call-answer">
+<h2>client.call.answer<a class="headerlink" href="#client-call-answer" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Уведомить сервер об ответе на звонок</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) данные</p></li>
+</ul>
+<p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
 </div>
 <div class="section" id="client-call-buzzcancel">
 <h2>client.call.buzzcancel<a class="headerlink" href="#client-call-buzzcancel" title="Ссылка на этот заголовок">¶</a></h2>
@@ -609,6 +620,15 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - состояние безмолвности</p></li>
+</ul>
+<p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
+</div>
+<div class="section" id="server-call-offer">
+<h2>server.call.offer<a class="headerlink" href="#server-call-offer" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Уведомить клиент о предложении звонка</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> - SDP (session description protocol) данные</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
 </div>
