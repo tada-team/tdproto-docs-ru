@@ -168,6 +168,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#onlinecall">OnlineCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecontact">OnlineContact</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pdfversion">PdfVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pushdevice">PushDevice</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reaction">Reaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#receivedmessage">ReceivedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#remind">Remind</a></li>
@@ -198,7 +199,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#userwithme">UserWithMe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wallpaper">Wallpaper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wikipage">WikiPage</a></li>
 </ul>
 </li>
 </ul>
@@ -461,7 +461,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Почему я не могу отправлять сообщения в этот чат (если не могу)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">collapsed</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Сжатое описание. Используется только в задачах</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">draft</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Черновик последнего сообщения, если существует</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Версия последнего черновика , если существует</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_gentime</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Версия последнего черновика , если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hidden</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Невидимый чат</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notifications_enabled</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Пуш уведомления включены</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">num_importants</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Число важных сообщений</p></li>
@@ -517,6 +517,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete_any_message</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я удалять сообщения в этом чате</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_set_important_any_message</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я менять флаг важности сообщений в этом чате</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_activity</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Дата последнего сообщения в этом чате если оно было удалено</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">draft_num</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Устарело</p></li>
 </ul>
 </div>
 <div class="section" id="chatshort">
@@ -565,7 +566,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">mood</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Настроение в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-teamstatus"><span class="std std-ref">TeamStatus</span></a>) - Статус в этой комманде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">last_activity</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Последняя активность в этой команде (iso дата-время)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">add_to_team_rights</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу добавлять пользователей в эту команду</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_archive</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Пользователь был удален</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">botname</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Имя бота. Пустое для пользователей</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sections</span></code> (array[string]) - Id секции</p></li>
@@ -721,6 +721,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Тема интерфейса по умолчанию</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Минимальная версия приложения iOS требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Минимальная версия приложения Android требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_corp_ios_version</span></code> (string) - Минимальная версия корпоративного приложения iOS требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_corp_android_version</span></code> (string) - Минимальная версия корпоративного приложения Android требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">free_registration</span></code> (boolean) - Свободная регистрация разрешена</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_upload_mb</span></code> (number) - Максимальный размер загрузок пользователя</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_linked_messages</span></code> (number) - Максимальное количество пересылаемых сообщений</p></li>
@@ -950,7 +952,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">has_previews</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Имеет предварительный просмотр ссылок. True или null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prev</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Id предыдущего сообщения в этом же чате. Uid или null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_first</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> -  сообщение первое в этом чате. True или null</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Это сообщение первое в чате. True или null</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">is_last</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Это сообщение последнее в чате. True или null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> (array[<a class="reference internal" href="#tdproto-upload"><span class="std std-ref">Upload</span></a>]) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Загрузки в сообщении</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reactions</span></code> (array[<a class="reference internal" href="#tdproto-messagereaction"><span class="std std-ref">MessageReaction</span></a>]) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Реакции сообщения. Возможен null</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reply_to</span></code> (<a class="reference internal" href="#tdproto-message"><span class="std std-ref">Message</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Сообщение которое было отвечено этим сообщением</p></li>
@@ -1108,6 +1110,21 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Абсолютная ссылка</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text_preview</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Первая строка теста</p></li>
+</ul>
+</div>
+<div class="section" id="pushdevice">
+<span id="tdproto-pushdevice"></span><h2>PushDevice<a class="headerlink" href="#pushdevice" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Информация о пуш устройстве</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (string) - Тип: android, ios, web, safari</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_id</span></code> (string) - Id устройства созданное клиентской библиотекой</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notification_token</span></code> (string) - токен уведомлений</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">voip_notification_token</span></code> (string) - Токен уведомлений для VOIP (только iOS)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Читаемое название устройства</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_pushes</span></code> (boolean) - Посылать тихо данные которые должны быть обработаны клиентом. Должно быть true для всех современных мобильных клиентов</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_badges</span></code> (boolean) - Посылать значки как данные. Экспериментально</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowed_notifications</span></code> (boolean) - Устарело</p></li>
 </ul>
 </div>
 <div class="section" id="reaction">
@@ -1361,6 +1378,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">single_group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Для команд с одной группой jid чата</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (<a class="reference internal" href="#tdproto-theme"><span class="std std-ref">Theme</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Цветовая тема если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hide_archived_users</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Не показывать архивированных пользователей по умолчанию</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pinned</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Закреплена ли команда</p></li>
 </ul>
 </div>
 <div class="section" id="teamcounter">
@@ -1545,7 +1563,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">inviter</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Id того кто пригласил</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> (array[<a class="reference internal" href="#tdproto-team"><span class="std std-ref">Team</span></a>]) - Доступные команды</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<span class="xref std std-ref">tdproto-PushDevice</span>]) - Зарегистрированные устройства для пушей</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (array[<a class="reference internal" href="#tdproto-pushdevice"><span class="std std-ref">PushDevice</span></a>]) - Зарегистрированные устройства для пушей</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phone</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Телефон для входа</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Email для входа</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family_name</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Фамилия</p></li>
@@ -1570,17 +1588,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (string) - Уникальный идентификатор</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Локализованное описание</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Ссылка на jpg или png</p></li>
-</ul>
-</div>
-<div class="section" id="wikipage">
-<span id="tdproto-wikipage"></span><h2>WikiPage<a class="headerlink" href="#wikipage" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Вики страница. Экспериментально.</p>
-<p><strong>Поля</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Версия объекта</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated</span></code> (string) - Время изменения</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">editor</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id контакта последнего автора изменений</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Текст страницы</p></li>
 </ul>
 </div>
 </div>
