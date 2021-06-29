@@ -128,7 +128,6 @@
 <li class="toctree-l1"><a class="reference internal" href="#json-objects-index">Индекс JSON объектов</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#buttoncolors">ButtonColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calldevice">CallDevice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#callevent">CallEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#callonliner">CallOnliner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chat">Chat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#chatshort">ChatShort</a></li>
@@ -155,13 +154,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#integrationform">IntegrationForm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrationkind">IntegrationKind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrations">Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jsep">JSEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#markupentity">MarkupEntity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message">Message</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagecolors">MessageColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagecontent">MessageContent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelink">MessageLink</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelinkpreview">MessageLinkPreview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#messagepush">MessagePush</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereaction">MessageReaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereactiondetail">MessageReactionDetail</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oauthservice">OAuthService</a></li>
@@ -199,6 +198,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#user">User</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#userwithme">UserWithMe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wallpaper">Wallpaper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#http-queries">HTTP Queries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tdproto-taskfilterquery">TaskFilter</a></li>
 </ul>
 </li>
 </ul>
@@ -413,23 +416,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">useragent</span></code> (string) - Описание устройства</p></li>
 </ul>
 </div>
-<div class="section" id="callevent">
-<span id="tdproto-callevent"></span><h2>CallEvent<a class="headerlink" href="#callevent" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Информация звонка</p>
-<p><strong>Поля</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата или контакта</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Id звонка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">buzz</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Звонок гудит</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Дата создания, iso datetime</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Начало звонка. Для прямых звонков может быть пустым во время гудка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finish</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Окончание звонка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> (boolean) - Запись звонка включена</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">onliners</span></code> (array[<a class="reference internal" href="#tdproto-callonliner"><span class="std std-ref">CallOnliner</span></a>]) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Участники звонка</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Версия</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timestamp</span></code> (number) - Устарело: используйте <code class="docutils literal notranslate"><span class="pre">gentime</span></code> или <code class="docutils literal notranslate"><span class="pre">created</span></code></p></li>
-</ul>
-</div>
 <div class="section" id="callonliner">
 <span id="tdproto-callonliner"></span><h2>CallOnliner<a class="headerlink" href="#callonliner" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Участник звонка</p>
@@ -573,6 +559,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">cant_send_message_reason</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Почему я не могу отправлять сообщения в этот чат (если не могу)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_call</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я звонить этому контакту</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_create_task</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я создавать задачи этому контакту</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_import_tasks</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я импортировать задачи в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_group</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я добавлять этого контакта в групповые чаты</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_delete</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я убрать этот контакт из команды</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">changeable_fields</span></code> (array[string]) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Изменяемые поля</p></li>
@@ -602,7 +589,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">unread_first</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Показывать непрочитанные чаты в списке чатов первыми</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">munread_first</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Показывать непрочитанные сообщения первыми в мобильном приложении</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_add_to_team</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я добавлять новых пользователей в эту команду</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_sections</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я добавлять новые секции в эту команду</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_sections</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я управлять секциями в этой команде</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">can_manage_projects</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли управлять проектами в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_tags</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я управлять тэгами в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_integrations</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я управлять интеграциями в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_manage_color_rules</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я управлять правилами цветов в этой команде</p></li>
@@ -808,7 +796,7 @@
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id контакта</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) - Статус в группе</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<a class="reference internal" href="#tdproto-groupstatus"><span class="std std-ref">GroupStatus</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> -  Мой статус в группе</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">can_remove</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могу ли я убрать этого пользователя</p></li>
 </ul>
 </div>
@@ -867,7 +855,6 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">help</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Полное описание</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kind</span></code> (string) - Уникальное имя интеграции</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> (string) - Не известно</p></li>
 </ul>
 </div>
 <div class="section" id="integrationfield">
@@ -909,6 +896,15 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Интеграции которые существуют на текущий момент</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Типы интеграции доступные для установки</p></li>
+</ul>
+</div>
+<div class="section" id="jsep">
+<span id="tdproto-jsep"></span><h2>JSEP<a class="headerlink" href="#jsep" title="Ссылка на этот заголовок">¶</a></h2>
+<p>JavaScript Session Establishment Protocol</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sdp</span></code> (string) - Session Description Protocol информация</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (string) - Смотрите <a class="reference external" href="https://rtcweb-wg.github.io/jsep/#rfc.section.4.1.8">https://rtcweb-wg.github.io/jsep/#rfc.section.4.1.8</a></p></li>
 </ul>
 </div>
 <div class="section" id="markupentity">
@@ -1033,24 +1029,6 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Титул веб сайта или og:title содержание</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Описание расширения</p></li>
-</ul>
-</div>
-<div class="section" id="messagepush">
-<span id="tdproto-messagepush"></span><h2>MessagePush<a class="headerlink" href="#messagepush" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Пуш сообщения через wensockets. Только для чтения</p>
-<p><strong>Поля</strong>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Титул пуша</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subtitle</span></code> (string) - Под титул</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> (string) - Тело</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">icon_url</span></code> (string) - абсолютная ссылка на иконку</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">click_action</span></code> (string) - Ссылка которая откроется при нажатии</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (string) - Тэг пуша (для совместных пушей)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">team</span></code> (string) - Uid команды</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id контакта отправителя</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chat</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id чата</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">message_id</span></code> (string) - Id сообщения</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Дата и время создания сообщения</p></li>
 </ul>
 </div>
 <div class="section" id="messagereaction">
@@ -1588,6 +1566,35 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (string) - Уникальный идентификатор</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Локализованное описание</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (string) - Ссылка на jpg или png</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="http-queries">
+<h1>HTTP Queries<a class="headerlink" href="#http-queries" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="tdproto-taskfilterquery">
+<span id="id1"></span><h2>TaskFilter<a class="headerlink" href="#tdproto-taskfilterquery" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Query для списка задач</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">assignee</span></code> - * ?assignee=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_gte</span></code> - * ?created_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_lte</span></code> - * ?created_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline_gte</span></code> - * ?deadline_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deadline_lte</span></code> - * ?deadline_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done_gte</span></code> - * ?done_gte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done_lte</span></code> - * ?done_lte=&lt;isodate&gt;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclude_task_status</span></code> - * ?exclude_task_status = new,done | new | any</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime_gt</span></code> - gentime great than group/chat</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">member</span></code> - * ?member=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> - * ?num=num1,num2,num3..</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">observer</span></code> - * ?observer=jid,jid // TODO: rename to ?follower=</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">owner</span></code> - * ?owner=jid,jid</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> - * ?public=true|false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q</span></code> - * ?q=</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">section</span></code> - * ?section=[ uid,uid… | «-» ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short</span></code> - * ?short=true|false</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort</span></code> - * ?sort = [ «created» | «-created» | «last_message» | «-last_message» | «deadline» | «-deadline» ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> - * ?tag=[ tag,tag,tag… | «-» ]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> - * ?task_status = new,done | new | any</p></li>
 </ul>
 </div>
 </div>

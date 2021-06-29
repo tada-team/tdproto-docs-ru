@@ -107,6 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_index.html">Индекс Enum</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_index.html#type-aliases">Псевдонимы типов</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_index.html#json-objects-index">Индекс JSON объектов</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_index.html#http-queries">HTTP Queries</a></li>
 </ul>
 
             
@@ -174,6 +175,32 @@
             
   <div class="section" id="task-related-paths">
 <h1>Пути относящиеся к задачам<a class="headerlink" href="#task-related-paths" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="http get">
+<dt class="sig sig-object http" id="get--api-v4-teams-team_id-tasks">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/tasks</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-tasks" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получить список задач</p>
+<p>Query параметры: <a class="reference internal" href="data_index.html#tdproto-taskfilterquery"><span class="std std-ref">TaskFilter</span></a></p>
+<p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__tasks">🔍 Попробуйте!</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Параметры</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>team_id</strong> – ID команды.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Ответный JSON объект</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
+<li><p><strong>result</strong> (<em>array</em>) – Список <a class="reference internal" href="data_index.html#tdproto-task"><span class="std std-ref">Task</span></a> объектов.</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Код статуса</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a> – Без ошибки</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="http post">
 <dt class="sig sig-object http" id="post--api-v4-teams-team_id-tasks">
 <span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/tasks</span></span><a class="headerlink" href="#post--api-v4-teams-team_id-tasks" title="Ссылка на это определение">¶</a></dt>
