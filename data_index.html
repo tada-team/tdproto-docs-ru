@@ -115,6 +115,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#type-aliases">Псевдонимы типов</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#activeuserdailystatlist">ActiveUserDailyStatList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#err">Err</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#isodatetimestring">ISODateTimeString</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jid">JID</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagelinks">MessageLinks</a></li>
@@ -154,6 +155,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#integrationform">IntegrationForm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrationkind">IntegrationKind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#integrations">Integrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#invitableuser">InvitableUser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jsep">JSEP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#markupentity">MarkupEntity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#message">Message</a></li>
@@ -163,6 +165,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#messagelinkpreview">MessageLinkPreview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereaction">MessageReaction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#messagereactiondetail">MessageReactionDetail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#myreactions">MyReactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#node">Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oauthservice">OAuthService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecall">OnlineCall</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#onlinecontact">OnlineContact</a></li>
@@ -178,6 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#subtask">Subtask</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#switchercolors">SwitcherColors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tag">Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tariff">Tariff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#task">Task</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcolor">TaskColor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#taskcounters">TaskCounters</a></li>
@@ -355,6 +360,10 @@
 <span id="tdproto-activeuserdailystatlist"></span><h2>ActiveUserDailyStatList<a class="headerlink" href="#activeuserdailystatlist" title="Ссылка на этот заголовок">¶</a></h2>
 <p><strong>Изначальный тип</strong>: ActiveUserDailyStat</p>
 <p><strong>Является списком</strong></p>
+</div>
+<div class="section" id="err">
+<span id="tdproto-err"></span><h2>Err<a class="headerlink" href="#err" title="Ссылка на этот заголовок">¶</a></h2>
+<p><strong>Базовый тип</strong>: string</p>
 </div>
 <div class="section" id="isodatetimestring">
 <span id="tdproto-isodatetimestring"></span><h2>ISODateTimeString<a class="headerlink" href="#isodatetimestring" title="Ссылка на этот заголовок">¶</a></h2>
@@ -543,6 +552,7 @@
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Id контакта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - uid узла для внешних пользователей</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Полное имя в чатах</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">short_name</span></code> (string) - Короткое имя в чатах</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">contact_email</span></code> (string) - Контактный email в этой команде</p></li>
@@ -706,6 +716,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">userver</span></code> (string) - аддресс сервера с статическими файлами</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ios_app</span></code> (string) - Ссылка в AppStore</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">android_app</span></code> (string) - Ссылка в Google Play</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ios_corp_app</span></code> (string) - Ссылка в AppStore для корпоративного приложения</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android_corp_app</span></code> (string) - Ссылка в Google Play для корпоративного приложения</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">theme</span></code> (string) - Тема интерфейса по умолчанию</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_ios_version</span></code> (string) - Минимальная версия приложения iOS требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_android_version</span></code> (string) - Минимальная версия приложения Android требуемая на этом сервере. Используется для обратно несовместимых изменений</p></li>
@@ -728,6 +740,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">max_integration_comment_length</span></code> (number) - Максимальная длина комментариев интеграций</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_teams</span></code> (number) - Максимальное количество команд для одного пользователя</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_message_search_limit</span></code> (number) - Максимальное количество результатов поиска</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multi_nodes</span></code> (boolean) <abbr title="Maybe omitted">💥</abbr> - Режим многих узлов включен (федерация)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">afk_age</span></code> (number) - Максимальное количество секунд не активности</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_password</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Аутентификация по паролю включена</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">auth_by_qr_code</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Аутентификация по QR-коду или ссылки включена</p></li>
@@ -738,10 +751,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_server</span></code> (boolean) - True при установки на внешний сервер</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_type</span></code> (string) - Название установки</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">installation_title</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Название установки. Используется на входной странице</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_app_icon_name</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Имя настроенной иконки если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">app_login_background</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Ссылка на изображение на заднем фоне приложения если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">web_login_background</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Ссылка на изображение на заднем фоне веб страницы если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_testing</span></code> (boolean) - Установка для тестирования</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metrika</span></code> (string) - Id счетчика Yandex метрики</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">amplitude_api_key</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - Amplitude ключ API</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">min_search_length</span></code> (number) - Мнимальное количество букв чтобы начать глобальный поиск</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resend_timeout</span></code> (number) - Попробовать снова отправить сообщение если сервер не ответил в течение даного времени в секундах</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sentry_dsn_js</span></code> (string) - Настройки sentry.io</p></li>
@@ -766,6 +781,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">allow_admin_mute</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Вики страницы в чатах. Экспериментально</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">default_wallpaper</span></code> (<a class="reference internal" href="#tdproto-wallpaper"><span class="std std-ref">Wallpaper</span></a>) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Ссылка на обои по умолчанию для мобильных приложений если существует</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">support_email</span></code> (string) - email поддержки</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_theme</span></code> (boolean) - True если у сервера не стандартная тема</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_checklist</span></code> (boolean) - Устарело</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">readonly_groups</span></code> (boolean) - Устарело</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">task_dashboard</span></code> (boolean) - Устарело</p></li>
@@ -778,7 +794,7 @@
 </div>
 <div class="section" id="fontcolors">
 <span id="tdproto-fontcolors"></span><h2>FontColors<a class="headerlink" href="#fontcolors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Цвета шрифтов для приложения</p>
+<p>FontColors цвета шрифтов приложения</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Цвет текста</p></li>
@@ -810,7 +826,7 @@
 </div>
 <div class="section" id="iconcolors">
 <span id="tdproto-iconcolors"></span><h2>IconColors<a class="headerlink" href="#iconcolors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Цвета иконок для приложения</p>
+<p>IconColors цвета иконок для приложения</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Цвет титула</p></li>
@@ -833,7 +849,7 @@
 </div>
 <div class="section" id="inputcolors">
 <span id="tdproto-inputcolors"></span><h2>InputColors<a class="headerlink" href="#inputcolors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Входные цвета для приложения</p>
+<p>InputColors входные цвета для приложения</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">static</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Статический цвет</p></li>
@@ -896,6 +912,17 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">integrations</span></code> (array[<a class="reference internal" href="#tdproto-integration"><span class="std std-ref">Integration</span></a>]) - Интеграции которые существуют на текущий момент</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kinds</span></code> (array[<a class="reference internal" href="#tdproto-integrationkind"><span class="std std-ref">IntegrationKind</span></a>]) - Типы интеграции доступные для установки</p></li>
+</ul>
+</div>
+<div class="section" id="invitableuser">
+<span id="tdproto-invitableuser"></span><h2>InvitableUser<a class="headerlink" href="#invitableuser" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Аккаунт из другой комманды, Active Directory или сервера</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - id аккаунта</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node</span></code> (string) <abbr title="Maybe omitted">💥</abbr> - uid узла для внешних пользователей</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Полное имя</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">icons</span></code> (<a class="reference internal" href="#tdproto-icondata"><span class="std std-ref">IconData</span></a>) - Иконки</p></li>
 </ul>
 </div>
 <div class="section" id="jsep">
@@ -963,7 +990,7 @@
 </div>
 <div class="section" id="messagecolors">
 <span id="tdproto-messagecolors"></span><h2>MessageColors<a class="headerlink" href="#messagecolors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Цвета сообщений для приложения</p>
+<p>MessageColors цвета сообщений для приложения</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bubble_sent</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Цвет пузыря отправлений</p></li>
@@ -1049,6 +1076,25 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> (string) - Когда сообщение было добавлено в iso дате и времени</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sender</span></code> (<a class="reference internal" href="#tdproto-jid"><span class="std std-ref">JID</span></a>) - Автор реакции</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Эмоджи реакции</p></li>
+</ul>
+</div>
+<div class="section" id="myreactions">
+<span id="tdproto-myreactions"></span><h2>MyReactions<a class="headerlink" href="#myreactions" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Реакции к сообщениям: часто используемые и все доступные</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">top</span></code> (array[<a class="reference internal" href="#tdproto-reaction"><span class="std std-ref">Reaction</span></a>]) - Мои часто используемые реакции</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">all</span></code> (array[<a class="reference internal" href="#tdproto-reaction"><span class="std std-ref">Reaction</span></a>]) - Все доступные реакции</p></li>
+</ul>
+</div>
+<div class="section" id="node">
+<span id="tdproto-node"></span><h2>Node<a class="headerlink" href="#node" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Узел (для внешних пользователей)</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - uid узла</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> (string) - Титул узла</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (boolean) - Синхронизация с узлом работает</p></li>
 </ul>
 </div>
 <div class="section" id="oauthservice">
@@ -1200,11 +1246,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">num</span></code> (number) - Номер задачи в этой команде</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">display_name</span></code> (string) - Титул</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Могут ли другие участники команды видеть этот чат/задачу</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">task_status</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Статус подзадачи</p></li>
 </ul>
 </div>
 <div class="section" id="switchercolors">
 <span id="tdproto-switchercolors"></span><h2>SwitcherColors<a class="headerlink" href="#switchercolors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Переключатель цветов в приложении</p>
+<p>SwitcherColors переключатель цветов в приложении</p>
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">on</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Цвет включения</p></li>
@@ -1218,6 +1265,20 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - Id тэга</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (string) - Имя тэга</p></li>
+</ul>
+</div>
+<div class="section" id="tariff">
+<span id="tdproto-tariff"></span><h2>Tariff<a class="headerlink" href="#tariff" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Тариф для комманд</p>
+<p><strong>Поля</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) - id тарифа</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title_en</span></code> (string) - Титул тарифа на английском</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title_ru</span></code> (string) - Титул тарифа на русском</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloud_space</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Объем зарезервированного места в облаке для загрузок в мегабайтах</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_members_in_team</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Максимальное количество участников в команде</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_participants_per_call</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Максимальное количество участников звонка</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_upload_filesize</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Максимальный размер загрузки</p></li>
 </ul>
 </div>
 <div class="section" id="task">
@@ -1279,6 +1340,7 @@
 <p><strong>Поля</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> (string) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Id чата</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gentime</span></code> (number) - Версия объекта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sort_ordering</span></code> (number) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Порядок сортирования</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (string) - Текст или «#{OtherTaskNumber}»</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">checked</span></code> (boolean) <abbr title="Возможно поле будет отсутствовать">💥</abbr> - Отмечено выполнимым</p></li>
@@ -1459,6 +1521,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">button</span></code> (<a class="reference internal" href="#tdproto-buttoncolors"><span class="std std-ref">ButtonColors</span></a>) <abbr title="Возможен null">0️⃣</abbr> - Цвет кнопок для приложения</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">input</span></code> (<a class="reference internal" href="#tdproto-inputcolors"><span class="std std-ref">InputColors</span></a>) <abbr title="Возможен null">0️⃣</abbr> - Цвета ввода для приложения</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ic</span></code> (<a class="reference internal" href="#tdproto-iconcolors"><span class="std std-ref">IconColors</span></a>) <abbr title="Возможен null">0️⃣</abbr> - Цвет иконок для приложения</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">web_base</span></code> (<span class="xref std std-ref">tdproto-WebBase</span>) <abbr title="Возможен null">0️⃣</abbr> - WebBase цвета для веб</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AppAccentColor</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Устарело</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">AppPrimaryColor</span></code> (<a class="reference internal" href="#tdproto-rgbcolor"><span class="std std-ref">RGBColor</span></a>) - Устарело</p></li>
 </ul>
