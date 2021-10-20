@@ -1,79 +1,37 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ru" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>События клиента &mdash; документация Tdproto docs </title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.svg"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
     <link rel="next" title="Индекс Enum" href="data_index.html" />
     <link rel="prev" title="Документация Websocket" href="websocket.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Tdproto docs
-          
-
-          
-            
             <img src="_static/logo.svg" class="logo" alt="Логотип"/>
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Поиск в документации" />
@@ -81,18 +39,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Основы</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bot_howto.html">Как создать бота</a></li>
@@ -169,55 +116,21 @@
 <li class="toctree-l1"><a class="reference internal" href="data_index.html#http-queries">HTTP Queries</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Tdproto docs</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>События клиента</li>
-    
-    
     <li class="wy-breadcrumbs-aside">
         
         <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/events">🇺🇸</a>
@@ -225,17 +138,15 @@
     </li>
 
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="client-events">
-<h1>События клиента<a class="headerlink" href="#client-events" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="section" id="client-activity">
-<h2>client.activity<a class="headerlink" href="#client-activity" title="Ссылка на этот заголовок">¶</a></h2>
+             
+  <section id="client-events">
+<h1>События клиента<a class="headerlink" href="#client-events" title="Ссылка на этот заголовок"></a></h1>
+<section id="client-activity">
+<h2>client.activity<a class="headerlink" href="#client-activity" title="Ссылка на этот заголовок"></a></h2>
 <p>Поменять AFK (не у клавиатуры) статус</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">afk</span></code> - Не у клавиатуры</p></li>
@@ -249,9 +160,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-buzzcancel">
-<h2>client.call.buzzcancel<a class="headerlink" href="#client-call-buzzcancel" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-buzzcancel">
+<h2>client.call.buzzcancel<a class="headerlink" href="#client-call-buzzcancel" title="Ссылка на этот заголовок"></a></h2>
 <p>Отмена звонка</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -265,9 +176,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-leave">
-<h2>client.call.leave<a class="headerlink" href="#client-call-leave" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-leave">
+<h2>client.call.leave<a class="headerlink" href="#client-call-leave" title="Ссылка на этот заголовок"></a></h2>
 <p>Покинуть звонок</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -283,17 +194,17 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-muteall">
-<h2>client.call.muteall<a class="headerlink" href="#client-call-muteall" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-muteall">
+<h2>client.call.muteall<a class="headerlink" href="#client-call-muteall" title="Ссылка на этот заголовок"></a></h2>
 <p>Заглушить всех других участников звонка</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="client-call-offer">
-<h2>client.call.offer<a class="headerlink" href="#client-call-offer" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-offer">
+<h2>client.call.offer<a class="headerlink" href="#client-call-offer" title="Ссылка на этот заголовок"></a></h2>
 <p>Начать звонок</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -313,9 +224,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-reject">
-<h2>client.call.reject<a class="headerlink" href="#client-call-reject" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-reject">
+<h2>client.call.reject<a class="headerlink" href="#client-call-reject" title="Ссылка на этот заголовок"></a></h2>
 <p>Отвергнуть звонок</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -330,9 +241,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-sdp">
-<h2>client.call.sdp<a class="headerlink" href="#client-call-sdp" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-sdp">
+<h2>client.call.sdp<a class="headerlink" href="#client-call-sdp" title="Ссылка на этот заголовок"></a></h2>
 <p>Для обмена Session Description с сервером когда Local Session Description клиента был изменен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -340,9 +251,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Id звонка</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="client-call-sound">
-<h2>client.call.sound<a class="headerlink" href="#client-call-sound" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-sound">
+<h2>client.call.sound<a class="headerlink" href="#client-call-sound" title="Ссылка на этот заголовок"></a></h2>
 <p>Поменять состояние безмолвности</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -358,9 +269,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-call-trickle">
-<h2>client.call.trickle<a class="headerlink" href="#client-call-trickle" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-call-trickle">
+<h2>client.call.trickle<a class="headerlink" href="#client-call-trickle" title="Ссылка на этот заголовок"></a></h2>
 <p>Послать trickle кандидата для webrtc соединения</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">candidate</span></code> - Trickle кандидат</p></li>
@@ -380,9 +291,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-chat-composing">
-<h2>client.chat.composing<a class="headerlink" href="#client-chat-composing" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-chat-composing">
+<h2>client.chat.composing<a class="headerlink" href="#client-chat-composing" title="Ссылка на этот заголовок"></a></h2>
 <p>Пишет или записывает аудио сообщение</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">composing</span></code> - true = начать писать / записывать аудио, false = остановиться</p></li>
@@ -399,9 +310,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-chat-lastread">
-<h2>client.chat.lastread<a class="headerlink" href="#client-chat-lastread" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-chat-lastread">
+<h2>client.chat.lastread<a class="headerlink" href="#client-chat-lastread" title="Ссылка на этот заголовок"></a></h2>
 <p>Последние прочитанное сообщение в чате изменилось</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -417,9 +328,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-confirm">
-<h2>client.confirm<a class="headerlink" href="#client-confirm" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-confirm">
+<h2>client.confirm<a class="headerlink" href="#client-confirm" title="Ссылка на этот заголовок"></a></h2>
 <p>Клиент подтвердил сообщение с сервера</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">confirm_id</span></code> - Уникальный идентификатор созданный клиентом.</p></li>
@@ -432,9 +343,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-message-deleted">
-<h2>client.message.deleted<a class="headerlink" href="#client-message-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-message-deleted">
+<h2>client.message.deleted<a class="headerlink" href="#client-message-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Сообщение удалено</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">message_id</span></code> - Id сообщения</p></li>
@@ -448,9 +359,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-message-updated">
-<h2>client.message.updated<a class="headerlink" href="#client-message-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-message-updated">
+<h2>client.message.updated<a class="headerlink" href="#client-message-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Сообщение создано или изменено</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> - Устарело</p></li>
@@ -484,9 +395,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="client-ping">
-<h2>client.ping<a class="headerlink" href="#client-ping" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="client-ping">
+<h2>client.ping<a class="headerlink" href="#client-ping" title="Ссылка на этот заголовок"></a></h2>
 <p>Пустое сообщение чтобы проверить статус соединения</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
      <span class="nt">&quot;confirm_id&quot;</span><span class="p">:</span> <span class="s2">&quot;8aad294579b8&quot;</span><span class="p">,</span>
@@ -494,12 +405,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="server-events">
-<h1>События сервера<a class="headerlink" href="#server-events" title="Ссылка на этот заголовок">¶</a></h1>
-<div class="section" id="server-call-answer">
-<h2>server.call.answer<a class="headerlink" href="#server-call-answer" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+</section>
+<section id="server-events">
+<h1>События сервера<a class="headerlink" href="#server-events" title="Ссылка на этот заголовок"></a></h1>
+<section id="server-call-answer">
+<h2>server.call.answer<a class="headerlink" href="#server-call-answer" title="Ссылка на этот заголовок"></a></h2>
 <p>Параметры звонка (устарело: используйте <cite>ServerCallSdp</cite>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">candidates</span></code> - Список ICE кандидатов (когда trickle = false)</p></li>
@@ -542,9 +453,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-call-buzz">
-<h2>server.call.buzz<a class="headerlink" href="#server-call-buzz" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-buzz">
+<h2>server.call.buzz<a class="headerlink" href="#server-call-buzz" title="Ссылка на этот заголовок"></a></h2>
 <p>Звонок гудит</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actor</span></code> - Краткая информация о создателе звонка</p></li>
@@ -579,9 +490,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-call-buzzcancel">
-<h2>server.call.buzzcancel<a class="headerlink" href="#server-call-buzzcancel" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-buzzcancel">
+<h2>server.call.buzzcancel<a class="headerlink" href="#server-call-buzzcancel" title="Ссылка на этот заголовок"></a></h2>
 <p>Звонок отменен на гудке</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -597,35 +508,35 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-call-checkfingerprint">
-<h2>server.call.checkfingerprint<a class="headerlink" href="#server-call-checkfingerprint" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-checkfingerprint">
+<h2>server.call.checkfingerprint<a class="headerlink" href="#server-call-checkfingerprint" title="Ссылка на этот заголовок"></a></h2>
 <p>Экспериментальная функция</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fingerprint</span></code> - Отсутствует документация</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-leave">
-<h2>server.call.leave<a class="headerlink" href="#server-call-leave" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-leave">
+<h2>server.call.leave<a class="headerlink" href="#server-call-leave" title="Ссылка на этот заголовок"></a></h2>
 <p>Участник звонка покинул звонок</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - uid звонка</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-muteall">
-<h2>server.call.muteall<a class="headerlink" href="#server-call-muteall" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-muteall">
+<h2>server.call.muteall<a class="headerlink" href="#server-call-muteall" title="Ссылка на этот заголовок"></a></h2>
 <p>Все участники звонка заглушены</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - состояние безмолвности</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-reject">
-<h2>server.call.reject<a class="headerlink" href="#server-call-reject" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-reject">
+<h2>server.call.reject<a class="headerlink" href="#server-call-reject" title="Ссылка на этот заголовок"></a></h2>
 <p>Отвергнуть звонок</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -633,9 +544,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Id звонка</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-restart">
-<h2>server.call.restart<a class="headerlink" href="#server-call-restart" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-restart">
+<h2>server.call.restart<a class="headerlink" href="#server-call-restart" title="Ссылка на этот заголовок"></a></h2>
 <p>Звонок перезапущен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -643,9 +554,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Id звонка</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-sdp">
-<h2>server.call.sdp<a class="headerlink" href="#server-call-sdp" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-sdp">
+<h2>server.call.sdp<a class="headerlink" href="#server-call-sdp" title="Ссылка на этот заголовок"></a></h2>
 <p>Для обмена Session Description с клиентом когда Local Session Description сервера был изменен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
@@ -653,18 +564,18 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">uid</span></code> - Id звонка</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-sound">
-<h2>server.call.sound<a class="headerlink" href="#server-call-sound" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-sound">
+<h2>server.call.sound<a class="headerlink" href="#server-call-sound" title="Ссылка на этот заголовок"></a></h2>
 <p>Отключить / включить микрофон участника звонка</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">muted</span></code> - состояние безмолвности</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-call-state">
-<h2>server.call.state<a class="headerlink" href="#server-call-state" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-state">
+<h2>server.call.state<a class="headerlink" href="#server-call-state" title="Ссылка на этот заголовок"></a></h2>
 <p>Информация о звонке</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audiorecord</span></code> - Запись звонка включена</p></li>
@@ -702,9 +613,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-call-talking">
-<h2>server.call.talking<a class="headerlink" href="#server-call-talking" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-call-talking">
+<h2>server.call.talking<a class="headerlink" href="#server-call-talking" title="Ссылка на этот заголовок"></a></h2>
 <p>Кото-то говорит в звонке</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actor</span></code> - Id исполнителя</p></li>
@@ -722,9 +633,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-chat-composing">
-<h2>server.chat.composing<a class="headerlink" href="#server-chat-composing" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-chat-composing">
+<h2>server.chat.composing<a class="headerlink" href="#server-chat-composing" title="Ссылка на этот заголовок"></a></h2>
 <p>Кто-то пишет или записывает звонок в чате</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">actor</span></code> - Id исполнителя</p></li>
@@ -744,9 +655,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-chat-deleted">
-<h2>server.chat.deleted<a class="headerlink" href="#server-chat-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-chat-deleted">
+<h2>server.chat.deleted<a class="headerlink" href="#server-chat-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Чат удален</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">badge</span></code> - количество непрочитанных сообщений</p></li>
@@ -783,9 +694,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-chat-draft">
-<h2>server.chat.draft<a class="headerlink" href="#server-chat-draft" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-chat-draft">
+<h2>server.chat.draft<a class="headerlink" href="#server-chat-draft" title="Ссылка на этот заголовок"></a></h2>
 <p>Черновик сообщения был изменен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">draft</span></code> - Текст черновика</p></li>
@@ -794,9 +705,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">jid</span></code> - id чата или контакта</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-chat-lastread">
-<h2>server.chat.lastread<a class="headerlink" href="#server-chat-lastread" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-chat-lastread">
+<h2>server.chat.lastread<a class="headerlink" href="#server-chat-lastread" title="Ссылка на этот заголовок"></a></h2>
 <p>Изменение последнего прочитанного сообщения</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">badge</span></code> - количество непрочитанных сообщений</p></li>
@@ -835,9 +746,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-chat-updated">
-<h2>server.chat.updated<a class="headerlink" href="#server-chat-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-chat-updated">
+<h2>server.chat.updated<a class="headerlink" href="#server-chat-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Чат создан или обновлен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">badge</span></code> - количество непрочитанных сообщений</p></li>
@@ -887,9 +798,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-confirm">
-<h2>server.confirm<a class="headerlink" href="#server-confirm" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-confirm">
+<h2>server.confirm<a class="headerlink" href="#server-confirm" title="Ссылка на этот заголовок"></a></h2>
 <p>Сервер потвердил сообщение клиента</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">confirm_id</span></code> - UID созданное сервером</p></li>
@@ -902,9 +813,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-contact-updated">
-<h2>server.contact.updated<a class="headerlink" href="#server-contact-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-contact-updated">
+<h2>server.contact.updated<a class="headerlink" href="#server-contact-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Контакт создан или обновлен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">contacts</span></code> - информация контакта</p></li>
@@ -936,17 +847,17 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-debug">
-<h2>server.debug<a class="headerlink" href="#server-debug" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-debug">
+<h2>server.debug<a class="headerlink" href="#server-debug" title="Ссылка на этот заголовок"></a></h2>
 <p>Отладочное сообщение</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> - Отладочное сообщение</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-login">
-<h2>server.login<a class="headerlink" href="#server-login" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-login">
+<h2>server.login<a class="headerlink" href="#server-login" title="Ссылка на этот заголовок"></a></h2>
 <p>Логин с другого устройства</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> - имя устройства</p></li>
@@ -959,9 +870,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-message-push">
-<h2>server.message.push<a class="headerlink" href="#server-message-push" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-message-push">
+<h2>server.message.push<a class="headerlink" href="#server-message-push" title="Ссылка на этот заголовок"></a></h2>
 <p>Проталкивание сообщения для настольного клиента</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">chat</span></code> - Id чата</p></li>
@@ -977,9 +888,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> - титул push</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-message-received">
-<h2>server.message.received<a class="headerlink" href="#server-message-received" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-message-received">
+<h2>server.message.received<a class="headerlink" href="#server-message-received" title="Ссылка на этот заголовок"></a></h2>
 <p>Сообщение полученное кем-то в чате</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">messages</span></code> - данные полученных сообщений</p></li>
@@ -999,9 +910,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-message-updated">
-<h2>server.message.updated<a class="headerlink" href="#server-message-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-message-updated">
+<h2>server.message.updated<a class="headerlink" href="#server-message-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Сообщение было создано, изменено или удалено</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">badge</span></code> - общее количество непрочитанных, если изменено</p></li>
@@ -1063,9 +974,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-online">
-<h2>server.online<a class="headerlink" href="#server-online" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-online">
+<h2>server.online<a class="headerlink" href="#server-online" title="Ссылка на этот заголовок"></a></h2>
 <p>Текшие активные звонки и члены команд онлайн</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">calls</span></code> - звонки в прогрессе</p></li>
@@ -1090,9 +1001,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-processing">
-<h2>server.processing<a class="headerlink" href="#server-processing" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-processing">
+<h2>server.processing<a class="headerlink" href="#server-processing" title="Ссылка на этот заголовок"></a></h2>
 <p>Состояние операции на заднем фоне</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> - Имя действия</p></li>
@@ -1102,9 +1013,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">total</span></code> - Total processing items</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-remind-deleted">
-<h2>server.remind.deleted<a class="headerlink" href="#server-remind-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-remind-deleted">
+<h2>server.remind.deleted<a class="headerlink" href="#server-remind-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Напоминание было удалено</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">reminds</span></code> - данные напоминания</p></li>
@@ -1121,9 +1032,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-remind-fired">
-<h2>server.remind.fired<a class="headerlink" href="#server-remind-fired" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-remind-fired">
+<h2>server.remind.fired<a class="headerlink" href="#server-remind-fired" title="Ссылка на этот заголовок"></a></h2>
 <p>Напоминание сработало</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">reminds</span></code> - данные напоминания</p></li>
@@ -1142,9 +1053,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-remind-updated">
-<h2>server.remind.updated<a class="headerlink" href="#server-remind-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-remind-updated">
+<h2>server.remind.updated<a class="headerlink" href="#server-remind-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Напоминание обновлено</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">reminds</span></code> - данные напоминания</p></li>
@@ -1163,9 +1074,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-section-deleted">
-<h2>server.section.deleted<a class="headerlink" href="#server-section-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-section-deleted">
+<h2>server.section.deleted<a class="headerlink" href="#server-section-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Секция контактов или задача была удалена</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">chat_type</span></code> - Тип чата</p></li>
@@ -1186,9 +1097,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-section-updated">
-<h2>server.section.updated<a class="headerlink" href="#server-section-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-section-updated">
+<h2>server.section.updated<a class="headerlink" href="#server-section-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Секция контактов или задача была создана или удалена</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">chat_type</span></code> - Тип чата</p></li>
@@ -1205,25 +1116,25 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-tag-deleted">
-<h2>server.tag.deleted<a class="headerlink" href="#server-tag-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-tag-deleted">
+<h2>server.tag.deleted<a class="headerlink" href="#server-tag-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Тэг удален</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - информация о тэге</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-tag-updated">
-<h2>server.tag.updated<a class="headerlink" href="#server-tag-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-tag-updated">
+<h2>server.tag.updated<a class="headerlink" href="#server-tag-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Тэг создан или удален</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - информация о тэге</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-team-counters">
-<h2>server.team.counters<a class="headerlink" href="#server-team-counters" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-team-counters">
+<h2>server.team.counters<a class="headerlink" href="#server-team-counters" title="Ссылка на этот заголовок"></a></h2>
 <p>Счетчик других комманд</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">badge</span></code> - количество непрочитанных сообщений</p></li>
@@ -1374,9 +1285,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-team-deleted">
-<h2>server.team.deleted<a class="headerlink" href="#server-team-deleted" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-team-deleted">
+<h2>server.team.deleted<a class="headerlink" href="#server-team-deleted" title="Ссылка на этот заголовок"></a></h2>
 <p>Комманда архивирована</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> - информация комманд</p></li>
@@ -1394,9 +1305,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-team-updated">
-<h2>server.team.updated<a class="headerlink" href="#server-team-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-team-updated">
+<h2>server.team.updated<a class="headerlink" href="#server-team-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Комманда создана или изменена</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">teams</span></code> - отсутствует документация</p></li>
@@ -1489,9 +1400,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-time">
-<h2>server.time<a class="headerlink" href="#server-time" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-time">
+<h2>server.time<a class="headerlink" href="#server-time" title="Ссылка на этот заголовок"></a></h2>
 <p>Текущее время на сервере</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">time</span></code> - текущее время</p></li>
@@ -1504,26 +1415,30 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-uisettings">
-<h2>server.uisettings<a class="headerlink" href="#server-uisettings" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-uisettings">
+<h2>server.uisettings<a class="headerlink" href="#server-uisettings" title="Ссылка на этот заголовок"></a></h2>
 <p>Часть настроик интерфейса была изменена</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> - Настройки пользовательского интерфейса</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> - Сфера. Например: web, app</p></li>
+</ul>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
      <span class="nt">&quot;last-tab&quot;</span><span class="p">:</span> <span class="mi">91238475</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="server-upload-updated">
-<h2>server.upload.updated<a class="headerlink" href="#server-upload-updated" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-upload-updated">
+<h2>server.upload.updated<a class="headerlink" href="#server-upload-updated" title="Ссылка на этот заголовок"></a></h2>
 <p>Загрузочный объект создан или изменен</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">uploads</span></code> - данные загрузки</p></li>
 </ul>
 <p><strong>ПРИМЕР ОТСУТСТВУЕТ</strong></p>
-</div>
-<div class="section" id="server-warning">
-<h2>server.warning<a class="headerlink" href="#server-warning" title="Ссылка на этот заголовок">¶</a></h2>
+</section>
+<section id="server-warning">
+<h2>server.warning<a class="headerlink" href="#server-warning" title="Ссылка на этот заголовок"></a></h2>
 <p>Что-то пошло не так с сообщением клиента</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">message</span></code> - сообщение</p></li>
@@ -1541,17 +1456,15 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="data_index.html" class="btn btn-neutral float-right" title="Индекс Enum" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
         <a href="websocket.html" class="btn btn-neutral float-left" title="Документация Websocket" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="data_index.html" class="btn btn-neutral float-right" title="Индекс Enum" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -1559,40 +1472,25 @@
   <div role="contentinfo">
     <li><a href="https://github.com/tada-team/tdproto-sphinx/">Project Homepage</a> &raquo;</li>
     
-    <p>
-        &#169; Copyright .
-
-    </p>
+    <p>&#169; Copyright .</p>
 
   </div>
-    
-    
-    
-    Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
-    
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
-    
-    предоставленной <a href="https://readthedocs.org">Read the Docs</a>. 
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
