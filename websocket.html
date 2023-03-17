@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="ru" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Документация Websocket &mdash; документация Tdproto docs </title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="shortcut icon" href="_static/favicon.svg"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
@@ -29,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Tdproto docs
-            <img src="_static/logo.png" class="logo" alt="Логотип"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tdproto docs
+              <img src="_static/logo.svg" class="logo" alt="Логотип"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Поиск в документации" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -75,8 +78,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Документация Websocket</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Документация Websocket</li>
     <li class="wy-breadcrumbs-aside">
         
         <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/websocket">🇺🇸</a>
@@ -90,17 +93,17 @@
            <div itemprop="articleBody">
              
   <section id="websockets-documentation">
-<h1>Документация Websocket<a class="headerlink" href="#websockets-documentation" title="Ссылка на этот заголовок"></a></h1>
+<h1>Документация Websocket<a class="headerlink" href="#websockets-documentation" title="Permalink to this heading"></a></h1>
 <p>Websocket - это полно-дуплексный протокол связи. <a class="reference external" href="https://ru.wikipedia.org/wiki/WebSocket">Страница в Википедии</a> об этом протоколе.</p>
 <p>В tada.team websockets используются для уведомления клиентов о событиях и голосовых вызовах.</p>
 <section id="connecting-to-websocket">
-<h2>Подключение к websocket<a class="headerlink" href="#connecting-to-websocket" title="Ссылка на этот заголовок"></a></h2>
+<h2>Подключение к websocket<a class="headerlink" href="#connecting-to-websocket" title="Permalink to this heading"></a></h2>
 <p>Ссылка чтобы присоединиться к websocket имеет форму <code class="docutils literal notranslate"><span class="pre">wss://web.tada.team/messaging/{team_id}</span></code> где team_id это JID команды для которой создать websocket. Это значит что для каждой команды нужен отдельное websocket соединение чтобы получать события из нескольких команд.</p>
 <p><code class="docutils literal notranslate"><span class="pre">web.tada.team</span></code> может быть заменено на другой домен.</p>
 <p>Для соединения с websocket необходима авторизация. Для авторизации нужно включить HTTP header <code class="docutils literal notranslate"><span class="pre">token</span></code> с токеном бота в запросе на соединение. Смотрите <a class="reference internal" href="bot_howto.html"><span class="doc">Как создать бота</span></a> o том как создать токен бота.</p>
 </section>
 <section id="event-json-objects">
-<h2>JSON объекты событий<a class="headerlink" href="#event-json-objects" title="Ссылка на этот заголовок"></a></h2>
+<h2>JSON объекты событий<a class="headerlink" href="#event-json-objects" title="Permalink to this heading"></a></h2>
 <p>Все события с сервера или на сервер должны быть завернуты в объект события.</p>
 <p>Объект события имеет следующие поля:</p>
 <ul class="simple">
@@ -110,18 +113,18 @@
 </ul>
 <p>Пример:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-     <span class="nt">&quot;confirm_id&quot;</span><span class="p">:</span> <span class="s2">&quot;75a406625c58&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;event&quot;</span><span class="p">:</span> <span class="s2">&quot;client.activity&quot;</span><span class="p">,</span>
-     <span class="nt">&quot;params&quot;</span><span class="p">:</span> <span class="p">{</span>
-             <span class="nt">&quot;afk&quot;</span><span class="p">:</span> <span class="kc">true</span>
-     <span class="p">}</span>
+<span class="w">     </span><span class="nt">&quot;confirm_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;75a406625c58&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;event&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client.activity&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">             </span><span class="nt">&quot;afk&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">     </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Это пример <a class="reference internal" href="events.html#client-activity"><span class="std std-ref">client.activity</span></a> события отправленного клиентом чтобы поставить статус AFK.</p>
 </section>
 <section id="list-of-events">
-<h2>Список событий<a class="headerlink" href="#list-of-events" title="Ссылка на этот заголовок"></a></h2>
+<h2>Список событий<a class="headerlink" href="#list-of-events" title="Permalink to this heading"></a></h2>
 <p><a class="reference internal" href="events.html#client-events"><span class="std std-ref">События клиента</span></a>. Эти события клиент может отправить на сервер.</p>
 <p><a class="reference internal" href="events.html#server-events"><span class="std std-ref">События сервера</span></a>. Эти события приходят с сервера.</p>
 </section>

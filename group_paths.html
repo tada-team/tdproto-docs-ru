@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="ru" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Пути относящиеся к группам &mdash; документация Tdproto docs </title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="shortcut icon" href="_static/favicon.svg"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
         <script src="_static/translations.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
@@ -29,12 +28,16 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> Tdproto docs
-            <img src="_static/logo.png" class="logo" alt="Логотип"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tdproto docs
+              <img src="_static/logo.svg" class="logo" alt="Логотип"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Поиск в документации" />
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -70,8 +73,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Пути относящиеся к группам</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Пути относящиеся к группам</li>
     <li class="wy-breadcrumbs-aside">
         
         <a style="color:red;font-size:36px;" href="https://tada-team.github.io/tdproto-docs-en/group_paths">🇺🇸</a>
@@ -85,25 +88,25 @@
            <div itemprop="articleBody">
              
   <section id="group-related-paths">
-<h1>Пути относящиеся к группам<a class="headerlink" href="#group-related-paths" title="Ссылка на этот заголовок"></a></h1>
+<h1>Пути относящиеся к группам<a class="headerlink" href="#group-related-paths" title="Permalink to this heading"></a></h1>
 <dl class="http get">
 <dt class="sig sig-object http" id="get--api-v4-teams-team_id-groups">
 <span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">/api/v4/teams/{team_id}/groups</span></span><a class="headerlink" href="#get--api-v4-teams-team_id-groups" title="Ссылка на это определение"></a></dt>
 <dd><p>Получить все группы в чате.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__groups">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Ответный JSON объект</dt>
+<dt class="field-even">Ответный JSON объект<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 <li><p><strong>result</strong> (<em>array</em>) – Список <a class="reference internal" href="data_index.html#tdmodels-Chat"><span class="std std-ref">Chat</span></a> объектов.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Код статуса</dt>
+<dt class="field-odd">Код статуса<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – Без ошибки</p></li>
 </ul>
@@ -117,17 +120,17 @@
 <dd><p>Удалить группу.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__groups">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>team_id</strong> – ID команды.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Ответный JSON объект</dt>
+<dt class="field-even">Ответный JSON объект<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Код статуса</dt>
+<dt class="field-odd">Код статуса<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – Без ошибки</p></li>
 </ul>
@@ -141,19 +144,19 @@
 <dd><p>Получить список участников группы.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/get_api_v4_teams__team_id__groups__group_id__members">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>team_id</strong> – ID команды.</p></li>
 <li><p><strong>group_id</strong> – ID группы.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Ответный JSON объект</dt>
+<dt class="field-even">Ответный JSON объект<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 <li><p><strong>result</strong> (<em>array</em>) – Список <a class="reference internal" href="data_index.html#tdmodels-GroupMembership"><span class="std std-ref">GroupMembership</span></a> объектов.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Код статуса</dt>
+<dt class="field-odd">Код статуса<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – Без ошибки</p></li>
 </ul>
@@ -167,20 +170,20 @@
 <dd><p>Убрать участника из группы.</p>
 <p><a class="reference external" href="https://tada-team.github.io/td-swagger-ui/#/default/delete_api_v4_teams__team_id__groups__group_id__members__contact_id_">🔍 Попробуйте!</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Параметры</dt>
+<dt class="field-odd">Параметры<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>team_id</strong> – ID команды.</p></li>
 <li><p><strong>contact_id</strong> – ID контакта.</p></li>
 <li><p><strong>group_id</strong> – ID группы.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Ответный JSON объект</dt>
+<dt class="field-even">Ответный JSON объект<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>ok</strong> (<em>boolean</em>) – True если не было ошибки</p></li>
 <li><p><strong>result</strong> (<em>object</em>) – <a class="reference internal" href="data_index.html#tdmodels-GroupMembership"><span class="std std-ref">GroupMembership</span></a> объект.</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Код статуса</dt>
+<dt class="field-odd">Код статуса<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><a class="reference external" href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.2.1">200 OK</a></span> – Без ошибки</p></li>
 </ul>
